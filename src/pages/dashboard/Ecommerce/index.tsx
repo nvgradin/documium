@@ -6,17 +6,11 @@ import FeatherIcon from 'feather-icons-react';
 import ShreyuDatepicker from '../../../components/Datepicker';
 import MembersList from '../../../components/MembersList';
 import Tasks from '../../../components/Tasks';
-import ChatList from '../../../components/ChatList';
 
 import Statistics from './Statistics';
-import OverView from './OverView';
-import RevenueChart from './RevenueChart';
-import TargetChart from './TargetChart';
-import SalesChart from './SalesChart';
-import Orders from './Orders';
 
 // dummy data
-import { orderDetails, topPerformers, tasks, chatMessages } from './data';
+import { tasks, } from './data';
 
 const EcommerceDashboard = () => {
     const [dateRange, setDateRange] = useState<any>([new Date(), new Date().setDate(new Date().getDate() + 7)]);
@@ -94,34 +88,33 @@ const EcommerceDashboard = () => {
 
             <Row>
                 <Col xl={3}>
-                    <OverView />
+                    
                 </Col>
                 <Col xl={6}>
-                    <RevenueChart />
+                    
                 </Col>
                 <Col xl={3}>
-                    <TargetChart />
+                    
                 </Col>
             </Row>
 
             <Row>
                 <Col xl={5}>
-                    <SalesChart />
                 </Col>
                 <Col xl={7}>
-                    <Orders orderDetails={orderDetails} />
+                    
                 </Col>
             </Row>
 
             <Row>
                 <Col xl={4}>
-                    <MembersList title={'Top Performers'} members={topPerformers} />
+                    
                 </Col>
                 <Col xl={4}>
                     <Tasks tasks={tasks} />
                 </Col>
                 <Col xl={4}>
-                    <ChatList title="Recent Conversation" messages={chatMessages} />
+                    
                 </Col>
             </Row>
         </>

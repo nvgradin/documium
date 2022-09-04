@@ -229,15 +229,15 @@ const Topbar = ({ hideLogo, navCssClasses, openLeftMenuCallBack, topbarDark }: T
                         <li className="dropdown d-inline-block d-lg-none">
                             <SearchDropdown />
                         </li>
-                        <li className="dropdown d-none d-lg-inline-block">
+                        { /*<li className="dropdown d-none d-lg-inline-block">
                             <MaximizeScreen />
                         </li>
-                        <li className="dropdown d-none d-lg-inline-block topbar-dropdown">
+                       <li className="dropdown d-none d-lg-inline-block topbar-dropdown">
                             <AppsDropdown />
                         </li>
                         <li className="dropdown d-none d-lg-inline-block topbar-dropdown">
                             <LanguageDropdown />
-                        </li>
+                        </li>*/}
                         <li className="dropdown notification-list topbar-dropdown">
                             <NotificationDropdown notifications={Notifications} />
                         </li>
@@ -253,7 +253,7 @@ const Topbar = ({ hideLogo, navCssClasses, openLeftMenuCallBack, topbarDark }: T
                         </li>
                     </ul>
 
-                    <ul className="list-unstyled topnav-menu topnav-menu-left m-0">
+                    { /*<ul className="list-unstyled topnav-menu topnav-menu-left m-0">
                         {layoutType !== LayoutTypes.LAYOUT_HORIZONTAL && (
                             <li>
                                 <button
@@ -271,7 +271,7 @@ const Topbar = ({ hideLogo, navCssClasses, openLeftMenuCallBack, topbarDark }: T
                             </button>
                         </li>
 
-                        {/* Mobile menu toggle (Horizontal Layout) */}
+                        {/* Mobile menu toggle (Horizontal Layout) 
                         <li>
                             <Link
                                 to="#"
@@ -290,7 +290,7 @@ const Topbar = ({ hideLogo, navCssClasses, openLeftMenuCallBack, topbarDark }: T
                         <li className="dropdown d-none d-xl-block">
                             <CreateNew otherOptions={otherOptions} />
                         </li>
-                    </ul>
+                    </ul>*/}
                 </div>
             </div>
         </React.Fragment>

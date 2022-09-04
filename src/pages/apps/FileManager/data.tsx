@@ -20,18 +20,6 @@ const folderDetails: folderDetailTypes[] = [
         variant: 'warning',
     },
     {
-        icon: 'bi bi-grid',
-        name: 'Apps',
-        size: '3.9 GB',
-        variant: 'info',
-    },
-    {
-        icon: 'bi bi-file-earmark',
-        name: 'Compile Version',
-        size: '21.6 GB',
-        variant: 'secondary',
-    },
-    {
         icon: 'bi bi-images',
         name: 'Pictures',
         size: '17.3 GB',

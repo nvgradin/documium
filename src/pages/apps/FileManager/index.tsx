@@ -8,6 +8,7 @@ import LeftSidePanel from './LeftSidePanel';
 import TopPanel from './TopPanel';
 import Folders from './Folders';
 import Recent from './Recent';
+import FileUploader from '../../../components/FileUploader';
 
 // dummy data
 import { folderDetails, recentFiles } from './data';
@@ -21,7 +22,7 @@ const FileManager = () => {
                     { label: 'Apps', path: '/apps/file-manager' },
                     { label: 'File Manager', path: '/apps/file-manager', active: true },
                 ]}
-                title={'File Manager'}
+                title={'Gestión de Documentos'}
             />
             <Row>
                 <Col>

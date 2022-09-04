@@ -34,15 +34,7 @@ const Recent = ({ recentFiles }: RecentProps) => {
                                         <span className="d-block d-sm-none">
                                             <i className="bi bi-file-earmark"></i>
                                         </span>
-                                        <span className="d-none d-sm-block">Document</span>
-                                    </Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item as="li">
-                                    <Nav.Link>
-                                        <span className="d-block d-sm-none">
-                                            <i className="bi bi-file-earmark-music"></i>
-                                        </span>
-                                        <span className="d-none d-sm-block">Music</span>
+                                        <span className="d-none d-sm-block">Grupo Gradín</span>
                                     </Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
@@ -50,7 +42,7 @@ const Recent = ({ recentFiles }: RecentProps) => {
                                         <span className="d-block d-sm-none">
                                             <i className="bi bi-card-image"></i>
                                         </span>
-                                        <span className="d-none d-sm-block">Picture</span>
+                                        <span className="d-none d-sm-block">JJ Gradín</span>
                                     </Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
@@ -58,7 +50,7 @@ const Recent = ({ recentFiles }: RecentProps) => {
                                         <span className="d-block d-sm-none">
                                             <i className="bi bi-card-list"></i>
                                         </span>
-                                        <span className="d-none d-sm-block">Other</span>
+                                        <span className="d-none d-sm-block">SIAL</span>
                                     </Nav.Link>
                                 </Nav.Item>
                             </Nav>

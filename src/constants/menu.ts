@@ -14,68 +14,37 @@ export interface MenuItemTypes {
 }
 
 const MENU_ITEMS: MenuItemTypes[] = [
+
     {
-        key: 'dashboards',
-        label: 'Dashboards',
+        key: 'ds-ecommerce',
+        label: 'Inicio',
         isTitle: false,
         icon: 'home',
-        badge: { variant: 'success', text: '02' },
-        children: [
-            {
-                key: 'ds-ecommerce',
-                label: 'Ecommerce',
-                url: '/dashboard/ecommerce',
-                parentKey: 'dashboards',
-            },
-            {
-                key: 'ds-analytics',
-                label: 'Analytics',
-                url: '/dashboard/analytics',
-                parentKey: 'dashboards',
-            },
-        ],
+        url: '/dashboard/ecommerce',
+        parentKey: 'dashboards',
+    },
+    {
+        key: 'apps-file-manager',
+        label: 'Gestión de documentos',
+        isTitle: false,
+        icon: 'file',
+        url: '/apps/file-manager',
+    },
+    {
+        key: 'form-basic',
+        label: 'Subir Archivo',
+        url: '/forms/basic',
+        icon: 'file-plus',
+        parentKey: 'forms',
+    },
+    {
+        key: 'form-upload',
+        label: 'File Uploads',
+        url: '/forms/upload',
+        icon: 'file-plus',
+        parentKey: 'forms',
     },
     { key: 'apps', label: 'Apps', isTitle: true },
-    {
-        key: 'apps-calendar',
-        label: 'Calendar',
-        isTitle: false,
-        icon: 'calendar',
-        url: '/apps/calendar',
-    },
-    {
-        key: 'apps-chat',
-        label: 'Chat',
-        isTitle: false,
-        icon: 'message-square',
-        url: '/apps/chat',
-    },
-    {
-        key: 'apps-email',
-        label: 'Email',
-        isTitle: false,
-        icon: 'mail',
-        children: [
-            {
-                key: 'email-inbox',
-                label: 'Inbox',
-                url: '/apps/email/inbox',
-                parentKey: 'apps-email',
-            },
-            {
-                key: 'email-read-email',
-                label: 'Read Email',
-                url: '/apps/email/details',
-                parentKey: 'apps-email',
-            },
-            {
-                key: 'email-compose-email',
-                label: 'Compose Email',
-                url: '/apps/email/compose',
-                parentKey: 'apps-email',
-            },
-        ],
-    },
     {
         key: 'apps-projects',
         label: 'Projects',
@@ -116,13 +85,7 @@ const MENU_ITEMS: MenuItemTypes[] = [
             },
         ],
     },
-    {
-        key: 'apps-file-manager',
-        label: 'File Manager',
-        isTitle: false,
-        icon: 'file-plus',
-        url: '/apps/file-manager',
-    },
+
     { key: 'custom', label: 'Custom', isTitle: true },
     {
         key: 'extra-pages',
@@ -130,12 +93,6 @@ const MENU_ITEMS: MenuItemTypes[] = [
         isTitle: false,
         icon: 'file-text',
         children: [
-            {
-                key: 'page-starter',
-                label: 'Starter',
-                url: '/pages/starter',
-                parentKey: 'extra-pages',
-            },
             {
                 key: 'page-profile',
                 label: 'Profile',
@@ -146,18 +103,6 @@ const MENU_ITEMS: MenuItemTypes[] = [
                 key: 'page-activity',
                 label: 'Activity',
                 url: '/pages/activity',
-                parentKey: 'extra-pages',
-            },
-            {
-                key: 'page-invoice',
-                label: 'Invoice',
-                url: '/pages/invoice',
-                parentKey: 'extra-pages',
-            },
-            {
-                key: 'page-pricing',
-                label: 'Pricing',
-                url: '/pages/pricing',
                 parentKey: 'extra-pages',
             },
             {
@@ -229,12 +174,6 @@ const MENU_ITEMS: MenuItemTypes[] = [
         icon: 'bookmark',
         children: [
             {
-                key: 'form-basic',
-                label: 'Basic Elements',
-                url: '/forms/basic',
-                parentKey: 'forms',
-            },
-            {
                 key: 'form-advanced',
                 label: 'Advanced',
                 url: '/forms/advanced',
@@ -258,20 +197,8 @@ const MENU_ITEMS: MenuItemTypes[] = [
                 url: '/forms/editors',
                 parentKey: 'forms',
             },
-            {
-                key: 'form-upload',
-                label: 'File Uploads',
-                url: '/forms/upload',
-                parentKey: 'forms',
-            },
+
         ],
-    },
-    {
-        key: 'charts',
-        label: 'Charts',
-        isTitle: false,
-        icon: 'bar-chart-2',
-        url: '/components/charts',
     },
     {
         key: 'tables',
@@ -293,74 +220,7 @@ const MENU_ITEMS: MenuItemTypes[] = [
             },
         ],
     },
-    {
-        key: 'maps',
-        label: 'Maps',
-        isTitle: false,
-        icon: 'map',
-        children: [
-            {
-                key: 'maps-googlemaps',
-                label: 'Google Maps',
-                url: '/maps/googlemaps',
-                parentKey: 'maps',
-            },
-            {
-                key: 'maps-vectormaps',
-                label: 'Vector Maps',
-                url: '/maps/vectormaps',
-                parentKey: 'maps',
-            },
-        ],
-    },
-    {
-        key: 'menu-levels',
-        label: 'Menu Levels',
-        isTitle: false,
-        icon: 'share-2',
-        children: [
-            {
-                key: 'menu-levels-1-1',
-                label: 'Level 1.1',
-                url: '/',
-                parentKey: 'menu-levels',
-                children: [
-                    {
-                        key: 'menu-levels-2-1',
-                        label: 'Level 2.1',
-                        url: '/',
-                        parentKey: 'menu-levels-1-1',
-                        children: [
-                            {
-                                key: 'menu-levels-3-1',
-                                label: 'Level 3.1',
-                                url: '/',
-                                parentKey: 'menu-levels-2-1',
-                            },
-                            {
-                                key: 'menu-levels-3-2',
-                                label: 'Level 3.2',
-                                url: '/',
-                                parentKey: 'menu-levels-2-1',
-                            },
-                        ],
-                    },
-                    {
-                        key: 'menu-levels-2-2',
-                        label: 'Level 2.2',
-                        url: '/',
-                        parentKey: 'menu-levels-1-1',
-                    },
-                ],
-            },
-            {
-                key: 'menu-levels-1-2',
-                label: 'Level 1.2',
-                url: '/',
-                parentKey: 'menu-levels',
-            },
-        ],
-    },
+
 ];
 
 const HORIZONTAL_MENU_ITEMS: MenuItemTypes[] = [
@@ -381,101 +241,6 @@ const HORIZONTAL_MENU_ITEMS: MenuItemTypes[] = [
                 label: 'Analytics',
                 url: '/dashboard/analytics',
                 parentKey: 'dashboards',
-            },
-        ],
-    },
-    {
-        key: 'apps',
-        icon: 'layers',
-        label: 'Apps',
-        isTitle: true,
-        children: [
-            {
-                key: 'apps-calendar',
-                label: 'Calendar',
-                isTitle: false,
-                url: '/apps/calendar',
-                parentKey: 'apps',
-            },
-            {
-                key: 'apps-chat',
-                label: 'Chat',
-                isTitle: false,
-                url: '/apps/chat',
-                parentKey: 'apps',
-            },
-            {
-                key: 'apps-email',
-                label: 'Email',
-                isTitle: false,
-                parentKey: 'apps',
-                children: [
-                    {
-                        key: 'email-inbox',
-                        label: 'Inbox',
-                        url: '/apps/email/inbox',
-                        parentKey: 'apps-email',
-                    },
-                    {
-                        key: 'email-read-email',
-                        label: 'Read Email',
-                        url: '/apps/email/details',
-                        parentKey: 'apps-email',
-                    },
-                    {
-                        key: 'email-compose-email',
-                        label: 'Compose Email',
-                        url: '/apps/email/compose',
-                        parentKey: 'apps-email',
-                    },
-                ],
-            },
-            {
-                key: 'apps-projects',
-                label: 'Projects',
-                isTitle: false,
-                parentKey: 'apps',
-                children: [
-                    {
-                        key: 'project-list',
-                        label: 'List',
-                        url: '/apps/projects/list',
-                        parentKey: 'apps-projects',
-                    },
-                    {
-                        key: 'project-details',
-                        label: 'Details',
-                        url: '/apps/projects/details',
-                        parentKey: 'apps-projects',
-                    },
-                ],
-            },
-            {
-                key: 'apps-tasks',
-                label: 'Tasks',
-                isTitle: false,
-                parentKey: 'apps',
-                children: [
-                    {
-                        key: 'task-list',
-                        label: 'List',
-                        url: '/apps/tasks/list',
-                        parentKey: 'apps-tasks',
-                    },
-                    {
-                        key: 'task-kanban',
-                        label: 'Kanban Board',
-                        url: '/apps/tasks/kanban',
-                        parentKey: 'apps-tasks',
-                    },
-                ],
-            },
-            {
-                key: 'apps-file-manager',
-                label: 'File Manager',
-                isTitle: false,
-                url: '/apps/file-manager',
-                parentKey: 'apps',
             },
         ],
     },
@@ -595,27 +360,7 @@ const HORIZONTAL_MENU_ITEMS: MenuItemTypes[] = [
                         parentKey: 'icons',
                     },
                 ],
-            },
-            {
-                key: 'maps',
-                label: 'Maps',
-                isTitle: false,
-                parentKey: 'components',
-                children: [
-                    {
-                        key: 'maps-googlemaps',
-                        label: 'Google Maps',
-                        url: '/maps/googlemaps',
-                        parentKey: 'maps',
-                    },
-                    {
-                        key: 'maps-vectormaps',
-                        label: 'Vector Maps',
-                        url: '/maps/vectormaps',
-                        parentKey: 'maps',
-                    },
-                ],
-            },
+            }
         ],
     },
     {
@@ -704,49 +449,6 @@ const TWO_COl_MENU_ITEMS: MenuItemTypes[] = [
         label: 'Apps',
         isTitle: true,
         children: [
-            {
-                key: 'apps-calendar',
-                label: 'Calendar',
-                isTitle: false,
-                icon: 'calendar',
-                url: '/apps/calendar',
-                parentKey: 'apps',
-            },
-            {
-                key: 'apps-chat',
-                label: 'Chat',
-                isTitle: false,
-                icon: 'message-square',
-                url: '/apps/chat',
-                parentKey: 'apps',
-            },
-            {
-                key: 'apps-email',
-                label: 'Email',
-                isTitle: false,
-                icon: 'mail',
-                parentKey: 'apps',
-                children: [
-                    {
-                        key: 'email-inbox',
-                        label: 'Inbox',
-                        url: '/apps/email/inbox',
-                        parentKey: 'apps-email',
-                    },
-                    {
-                        key: 'email-read-email',
-                        label: 'Read Email',
-                        url: '/apps/email/details',
-                        parentKey: 'apps-email',
-                    },
-                    {
-                        key: 'email-compose-email',
-                        label: 'Compose Email',
-                        url: '/apps/email/compose',
-                        parentKey: 'apps-email',
-                    },
-                ],
-            },
             {
                 key: 'apps-projects',
                 label: 'Projects',
@@ -968,76 +670,6 @@ const TWO_COl_MENU_ITEMS: MenuItemTypes[] = [
                         label: 'Advanced Tables',
                         url: '/tables/advanced',
                         parentKey: 'tables',
-                    },
-                ],
-            },
-            {
-                key: 'maps',
-                label: 'Maps',
-                isTitle: false,
-                icon: 'map',
-                parentKey: 'components',
-                children: [
-                    {
-                        key: 'maps-googlemaps',
-                        label: 'Google Maps',
-                        url: '/maps/googlemaps',
-                        parentKey: 'maps',
-                    },
-                    {
-                        key: 'maps-vectormaps',
-                        label: 'Vector Maps',
-                        url: '/maps/vectormaps',
-                        parentKey: 'maps',
-                    },
-                ],
-            },
-            {
-                key: 'menu-levels',
-                label: 'Menu Levels',
-                isTitle: false,
-                icon: 'share-2',
-                parentKey: 'components',
-                children: [
-                    {
-                        key: 'menu-levels-1-1',
-                        label: 'Level 1.1',
-                        url: '/',
-                        parentKey: 'menu-levels',
-                        children: [
-                            {
-                                key: 'menu-levels-2-1',
-                                label: 'Level 2.1',
-                                url: '/',
-                                parentKey: 'menu-levels-1-1',
-                                children: [
-                                    {
-                                        key: 'menu-levels-3-1',
-                                        label: 'Level 3.1',
-                                        url: '/',
-                                        parentKey: 'menu-levels-2-1',
-                                    },
-                                    {
-                                        key: 'menu-levels-3-2',
-                                        label: 'Level 3.2',
-                                        url: '/',
-                                        parentKey: 'menu-levels-2-1',
-                                    },
-                                ],
-                            },
-                            {
-                                key: 'menu-levels-2-2',
-                                label: 'Level 2.2',
-                                url: '/',
-                                parentKey: 'menu-levels-1-1',
-                            },
-                        ],
-                    },
-                    {
-                        key: 'menu-levels-1-2',
-                        label: 'Level 1.2',
-                        url: '/',
-                        parentKey: 'menu-levels',
                     },
                 ],
             },

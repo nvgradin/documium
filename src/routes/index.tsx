@@ -20,18 +20,11 @@ const Landing = React.lazy(() => import('../pages/landing/'));
 
 // dashboard
 const EcommerceDashboard = React.lazy(() => import('../pages/dashboard/Ecommerce/'));
-const AnalyticsDashboard = React.lazy(() => import('../pages/dashboard/Analytics/'));
 
 // apps
-const CalendarApp = React.lazy(() => import('../pages/apps/Calendar/'));
 const Projects = React.lazy(() => import('../pages/apps/Projects/'));
 const ProjectDetail = React.lazy(() => import('../pages/apps/Projects/Detail/'));
-// - chat
-const ChatApp = React.lazy(() => import('../pages/apps/Chat/'));
-// - email
-const Inbox = React.lazy(() => import('../pages/apps/Email/Inbox'));
-const EmailDetail = React.lazy(() => import('../pages/apps/Email/Detail'));
-const EmailCompose = React.lazy(() => import('../pages/apps/Email/Compose'));
+
 // - tasks
 const TaskList = React.lazy(() => import('../pages/apps/Tasks/List/'));
 const Kanban = React.lazy(() => import('../pages/apps/Tasks/Board/'));
@@ -47,7 +40,6 @@ const Profile = React.lazy(() => import('../pages/other/Profile'));
 const Activity = React.lazy(() => import('../pages/other/Activity'));
 const Invoice = React.lazy(() => import('../pages/other/Invoice'));
 const Maintenance = React.lazy(() => import('../pages/other/Maintenance'));
-const Pricing = React.lazy(() => import('../pages/other/Pricing'));
 
 // uikit
 const UIElements = React.lazy(() => import('../pages/uikit'));
@@ -74,10 +66,6 @@ const Charts = React.lazy(() => import('../pages/charts/'));
 // tables
 const BasicTables = React.lazy(() => import('../pages/tables/Basic'));
 const AdvancedTables = React.lazy(() => import('../pages/tables/Advanced'));
-
-// maps
-const GoogleMaps = React.lazy(() => import('../pages/maps/GoogleMaps'));
-const VectorMaps = React.lazy(() => import('../pages/maps/VectorMaps'));
 
 export interface RoutesProps {
     path: RouteProps['path'];
@@ -110,59 +98,6 @@ const dashboardRoutes: RoutesProps = {
             path: '/dashboard/ecommerce',
             name: 'Ecommerce',
             component: EcommerceDashboard,
-            route: PrivateRoute,
-        },
-        {
-            path: '/dashboard/analytics',
-            name: 'Analytics',
-            component: AnalyticsDashboard,
-            route: PrivateRoute,
-        },
-    ],
-};
-
-const calendarAppRoutes: RoutesProps = {
-    path: '/apps/calendar',
-    name: 'Calendar',
-    route: PrivateRoute,
-    roles: ['Admin'],
-    icon: 'calendar',
-    component: CalendarApp,
-    header: 'Apps',
-};
-
-const chatAppRoutes: RoutesProps = {
-    path: '/apps/chat',
-    name: 'Chat',
-    route: PrivateRoute,
-    roles: ['Admin'],
-    icon: 'message-square',
-    component: ChatApp,
-};
-
-const emailAppRoutes: RoutesProps = {
-    path: '/apps/email',
-    name: 'Email',
-    route: PrivateRoute,
-    roles: ['Admin'],
-    icon: 'mail',
-    children: [
-        {
-            path: '/apps/email/inbox',
-            name: 'Inbox',
-            component: Inbox,
-            route: PrivateRoute,
-        },
-        {
-            path: '/apps/email/details',
-            name: 'Email Details',
-            component: EmailDetail,
-            route: PrivateRoute,
-        },
-        {
-            path: '/apps/email/compose',
-            name: 'Compose Email',
-            component: EmailCompose,
             route: PrivateRoute,
         },
     ],
@@ -222,7 +157,7 @@ const fileAppRoutes: RoutesProps = {
     component: FileManager,
 };
 
-const appRoutes = [dashboardRoutes, calendarAppRoutes, chatAppRoutes, emailAppRoutes, projectAppRoutes, taskAppRoutes, fileAppRoutes];
+const appRoutes = [dashboardRoutes, projectAppRoutes, taskAppRoutes, fileAppRoutes];
 
 // pages
 const extrapagesRoutes: RoutesProps = {
@@ -247,18 +182,6 @@ const extrapagesRoutes: RoutesProps = {
             path: '/pages/activity',
             name: 'Activity',
             component: Activity,
-            route: PrivateRoute,
-        },
-        {
-            path: '/pages/invoice',
-            name: 'Invoice',
-            component: Invoice,
-            route: PrivateRoute,
-        },
-        {
-            path: '/pages/pricing',
-            name: 'Pricing',
-            component: Pricing,
             route: PrivateRoute,
         },
     ],
@@ -369,24 +292,6 @@ const uiRoutes: RoutesProps = {
                     path: '/tables/advanced',
                     name: 'Advanced',
                     component: AdvancedTables,
-                    route: PrivateRoute,
-                },
-            ],
-        },
-        {
-            path: '/maps',
-            name: 'Maps',
-            children: [
-                {
-                    path: '/maps/googlemaps',
-                    name: 'Google Maps',
-                    component: GoogleMaps,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/maps/vectorMaps',
-                    name: 'Google Maps',
-                    component: VectorMaps,
                     route: PrivateRoute,
                 },
             ],

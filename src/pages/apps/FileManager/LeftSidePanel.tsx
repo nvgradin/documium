@@ -31,9 +31,9 @@ const LeftSidePanel = () => {
             <Card.Body className="d-flex align-items-start p-0">
                 <img src={user} className="me-2 rounded-circle" height="48" alt="" />
                 <div className="flex-grow-1">
-                    <h5 className="mt-2 mb-0 fs-15 fw-bold">Shreyu N</h5>
+                    <h5 className="mt-2 mb-0 fs-15 fw-bold">Nombre</h5>
                     <span className="text-muted fs-12">
-                        Logout <i className="bi bi-arrow-right ms-1"></i>
+                        Email 
                     </span>
                 </div>
             </Card.Body>
@@ -51,19 +51,10 @@ const LeftSidePanel = () => {
                     <i className="bi bi-download me-2"></i>Downloads
                 </Link>
                 <Link to="#" className="list-group-item border-0 my-1 text-muted">
-                    <i className="bi bi-music-note-beamed me-2"></i>Music
+                    <i className="bi bi-clock me-2"></i>Recientes
                 </Link>
                 <Link to="#" className="list-group-item border-0 my-1 text-muted">
-                    <i className="bi bi-image me-2"></i>Pictures
-                </Link>
-                <Link to="#" className="list-group-item border-0 my-1 text-muted">
-                    <i className="bi bi-youtube me-2"></i>Video
-                </Link>
-                <Link to="#" className="list-group-item border-0 my-1 text-muted">
-                    <i className="bi bi-clock me-2"></i>Recent
-                </Link>
-                <Link to="#" className="list-group-item border-0 my-1 text-muted">
-                    <i className="bi bi-trash me-2"></i>Bin
+                    <i className="bi bi-trash me-2"></i>Papelera
                 </Link>
             </div>
 
