@@ -35,7 +35,7 @@ const BottomLink = () => {
         <Row className="mt-3">
             <Col xs={12} className="text-center">
                 <p className="text-muted">
-                    {t('Already have account?')}{' '}
+                    {t('Ya tienes una cuenta?')}{' '}
                     <Link to={'/auth/login'} className="text-primary fw-bold ms-1">
                         {t('Login')}
                     </Link>
@@ -97,8 +97,8 @@ const Register = () => {
                     </Link>
                 </div>
 
-                <h6 className="h5 mb-0 mt-3">{t('Create your account')}</h6>
-                <p className="text-muted mt-1 mb-4">{t('Create a free account and start using Shreyu')}</p>
+                <h6 className="h5 mb-0 mt-3">{t('Crea tu cuenta')}</h6>
+                <p className="text-muted mt-1 mb-4">{t('Crea tu cuenta y empieza a usar Documium')}</p>
 
                 {error && (
                     <Alert variant="danger" className="my-2">
@@ -112,19 +112,19 @@ const Register = () => {
                     defaultValues={{}}
                     formClass="authentication-form">
                     <FormInput
-                        label={t('Name')}
+                        label={t('Nombre de usuario')}
                         type="text"
                         name="name"
                         startIcon={<FeatherIcons icon={'user'} className="icon-dual" />}
-                        placeholder={t('Your full name')}
+                        placeholder={t('Tu nombre')}
                         containerClass={'mb-3'}
                     />
                     <FormInput
-                        label={t('Email Address')}
+                        label={t('Email')}
                         type="email"
                         name="email"
                         startIcon={<FeatherIcons icon={'mail'} className="icon-dual" />}
-                        placeholder={t('hello@coderthemes.com')}
+                        placeholder={t('ejemplo@documium.com')}
                         containerClass={'mb-3'}
                     />
                     <FormInput
@@ -132,11 +132,11 @@ const Register = () => {
                         type="password"
                         name="password"
                         startIcon={<FeatherIcons icon={'lock'} className="icon-dual" />}
-                        placeholder={t('Enter your Password')}
+                        placeholder={t('Escribe tu Contraseña')}
                         containerClass={'mb-3'}
                     />
                     <FormInput
-                        label={t('I accept Terms and Conditions')}
+                        label={t('Acepto los Términos y Condiciones')}
                         type="checkbox"
                         name="checkboxsignup"
                         containerClass={'mb-3'}
@@ -145,7 +145,7 @@ const Register = () => {
 
                     <div className="mb-3 text-center d-grid">
                         <Button type="submit" disabled={loading}>
-                            {t('Sign Up')}
+                            {t('Entrar')}
                         </Button>
                     </div>
                 </VerticalForm>

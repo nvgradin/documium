@@ -118,14 +118,14 @@ const Login = () => {
                 <VerticalForm<UserData>
                     onSubmit={onSubmit}
                     resolver={schemaResolver}
-                    defaultValues={{ email: 'shreyu@coderthemes.com', password: 'test' }}
+                    defaultValues={{ email: 'hola@documium.com', password: 'test' }}
                     formClass="authentication-form">
                     <FormInput
                         type="email"
                         name="email"
                         label={t('Email Address')}
                         startIcon={<FeatherIcons icon={'mail'} className="icon-dual" />}
-                        placeholder={t('hello@coderthemes.com')}
+                        placeholder={t('hola@documium.com')}
                         containerClass={'mb-3'}
                     />
                     <FormInput
