@@ -8,12 +8,9 @@ const BasicInputElements = () => {
     return (
         <Card>
             <Card.Body>
-                <h4 className="header-title mt-0">Input Types</h4>
+                <h4 className="header-title mt-0">Añadir Documento</h4>
                 <p className="sub-header">
-                    Most common form control, text-based input fields. Includes support for all HTML5 types:{' '}
-                    <code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>,{' '}
-                    <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>,{' '}
-                    <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, and <code>color</code>.
+                    Registro nuevo de documento
                 </p>
 
                 <Form className="form-horizontal">
@@ -21,194 +18,187 @@ const BasicInputElements = () => {
                         <Col md={6}>
                             <Form.Group as={Row} className="mb-3">
                                 <Form.Label column lg={2} htmlFor="simpleinput">
-                                    Text
+                                    Nombre
                                 </Form.Label>
                                 <Col lg={10}>
-                                    <Form.Control type="text" id="simpleinput" defaultValue="Some text value..." />
+                                    <Form.Control type="text" id="simpleinput" defaultValue="Nombre del Archivo..." />
                                 </Col>
                             </Form.Group>
                             <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2} htmlFor="example-email">
-                                    Email
+                                <Form.Label column lg={2}>
+                                    Origen
                                 </Form.Label>
                                 <Col lg={10}>
-                                    <Form.Control
-                                        type="email"
-                                        id="example-email"
-                                        name="example-email"
-                                        placeholder="Email"
+                                    <Form.Check
+                                        type="radio"
+                                        className="mb-1"
+                                        id="default-radio1"
+                                        name="customRadio"
+                                        label="Entrada"
+                                    />
+                                    <Form.Check
+                                        type="radio"
+                                        id="default-radio2"
+                                        name="customRadio"
+                                        label="Salida"
+                                        defaultChecked
+                                    />
+                                    <Form.Check
+                                        type="radio"
+                                        id="default-radio2"
+                                        name="customRadio"
+                                        label="Interno"
+                                        defaultChecked
                                     />
                                 </Col>
                             </Form.Group>
                             <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2} htmlFor="example-password">
-                                    Password
+                                <Form.Label column lg={2}>
+                                    Empresa
                                 </Form.Label>
                                 <Col lg={10}>
-                                    <Form.Control type="password" id="example-password" defaultValue="password" />
-                                </Col>
-                            </Form.Group>
-
-                            <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2} htmlFor="example-placeholder">
-                                    Placeholder
-                                </Form.Label>
-                                <Col lg={10}>
-                                    <Form.Control type="text" placeholder="placeholder" id="example-placeholder" />
+                                    <Form.Select>
+                                        <option>JJ.Gradín</option>
+                                        <option>SIAL S.A.</option>
+                                        <option>Grupo Gradín</option>
+                                        <option>Horposa</option>
+                                        <option>A Granxa</option>
+                                        <option>Contrac</option>
+                                        <option>Jurídico</option>
+                                        <option>Laboral</option>
+                                        <option>OTS</option>
+                                        <option>Parque Emp. do Fulao</option>
+                                        <option>Seguros</option>
+                                    </Form.Select>
                                 </Col>
                             </Form.Group>
                             <Form.Group as={Row} className="mb-3">
                                 <Form.Label column lg={2} htmlFor="example-textarea">
-                                    Text area
+                                    Notas
                                 </Form.Label>
                                 <Col lg={10}>
-                                    <Form.Control as="textarea" rows={5} id="example-textarea" />
+                                    <Form.Control as="textarea" rows={5} id="notas" placeholder="Añadir información adiccional" />
                                 </Col>
-                            </Form.Group>
-
+                            </Form.Group> 
                             <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2}>
-                                    Readonly
-                                </Form.Label>
-                                <Col lg={10}>
-                                    <Form.Control type="text" readOnly value="Readonly value" />
-                                </Col>
-                            </Form.Group>
-                            <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2}>
-                                    Disabled
-                                </Form.Label>
-                                <Col lg={10}>
-                                    <Form.Control type="text" disabled value="Disabled value" />
-                                </Col>
-                            </Form.Group>
-
-                            <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2} htmlFor="example-static">
-                                    Static control
+                                <Form.Label column lg={2} htmlFor="example-email">
+                                    Contactos relacionados
                                 </Form.Label>
                                 <Col lg={10}>
                                     <Form.Control
                                         type="text"
-                                        readOnly
-                                        plaintext
-                                        id="example-static"
-                                        value="email@example.com"
+                                        id="contactos-relacionados"
+                                        name="example-email"
+                                        placeholder="Contacto"
                                     />
                                 </Col>
                             </Form.Group>
                             <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2} htmlFor="example-helping">
-                                    Helping text
+                                <Form.Label column lg={2} htmlFor="example-email">
+                                    Emails relacionados
                                 </Form.Label>
                                 <Col lg={10}>
-                                    <Form.Control type="text" id="example-helping" placeholder="Helping text" />
-                                    <span className="help-block">
-                                        <small>
-                                            A block of help text that breaks onto a new line and may extend beyond one
-                                            line.
-                                        </small>
-                                    </span>
+                                     <Form.Control type="email" placeholder="name@example.com" />
                                 </Col>
                             </Form.Group>
-
                             <Form.Group as={Row} className="mb-3">
                                 <Form.Label column lg={2}>
-                                    Input Select
+                                    Tel
                                 </Form.Label>
                                 <Col lg={10}>
-                                    <Form.Select>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </Form.Select>
+                                    <Form.Control type="tel" name="tel" placeholder="Añadir Teléfono"/>
+                                </Col>
+                            </Form.Group>
+                            <Form.Group as={Row} className="mb-3">
+                                <Form.Label column lg={2}>
+                                    Web
+                                </Form.Label>
+                                <Col lg={10}>
+                                    <Form.Control type="url" name="url" placeholder="Añadir Web"/>
                                 </Col>
                             </Form.Group>
                         </Col>
                         <Col md={6}>
                             <Form.Group as={Row} className="mb-3">
                                 <Form.Label column lg={2} htmlFor="example-fileinput">
-                                    Default file input
+                                    Subir archivo
                                 </Form.Label>
                                 <Col lg={10}>
                                     <Form.Control type="file" id="example-fileinput" />
                                 </Col>
                             </Form.Group>
-
                             <Form.Group as={Row} className="mb-3">
                                 <Form.Label column lg={2} htmlFor="example-date">
-                                    Date
+                                    Fecha del documento
                                 </Form.Label>
                                 <Col lg={10}>
                                     <Form.Control id="example-date" type="date" name="date" />
                                 </Col>
                             </Form.Group>
-
                             <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2} htmlFor="example-month">
-                                    Month
+                                <Form.Label column lg={2} htmlFor="example-date">
+                                    Fecha de subida
                                 </Form.Label>
                                 <Col lg={10}>
-                                    <Form.Control id="example-month" type="month" name="month" />
+                                    <Form.Control id="example-date" type="date" name="date" />
                                 </Col>
                             </Form.Group>
-
-                            <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2} htmlFor="example-time">
-                                    Time
-                                </Form.Label>
-                                <Col lg={10}>
-                                    <Form.Control id="example-time" type="time" name="time" />
-                                </Col>
-                            </Form.Group>
-
-                            <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2} htmlFor="example-week">
-                                    Week
-                                </Form.Label>
-                                <Col lg={10}>
-                                    <Form.Control id="example-week" type="week" name="week" />
-                                </Col>
-                            </Form.Group>
-
-                            <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2} htmlFor="example-number">
-                                    Number
-                                </Form.Label>
-                                <Col lg={10}>
-                                    <Form.Control id="example-number" type="number" name="number" />
-                                </Col>
-                            </Form.Group>
-
                             <Form.Group as={Row} className="mb-3">
                                 <Form.Label column lg={2}>
-                                    URL
+                                    Área
                                 </Form.Label>
                                 <Col lg={10}>
-                                    <Form.Control type="url" name="url" />
+                                    <Form.Select>
+                                        <option>Arrendamientos</option>
+                                        <option>Auditoría</option>
+                                        <option>Concesiones</option>
+                                        <option>Contable</option>
+                                        <option>Financiero</option>
+                                        <option>Fiscal</option>
+                                        <option>Jurídico</option>
+                                        <option>Laboral</option>
+                                        <option>OTS</option>
+                                        <option>Parque Emp. do Fulao</option>
+                                        <option>Seguros</option>
+                                    </Form.Select>
                                 </Col>
                             </Form.Group>
-
                             <Form.Group as={Row} className="mb-3">
                                 <Form.Label column lg={2}>
-                                    Search
+                                    Tipo de documento
                                 </Form.Label>
                                 <Col lg={10}>
-                                    <Form.Control type="search" name="search" />
+                                    <Form.Select>
+                                        <option>Carta</option>
+                                        <option>Contrato</option>
+                                        <option>Email</option>
+                                        <option>Escrituras</option>
+                                        <option>Planos</option>
+                                        <option>Presupuestos</option>
+                                        <option>Otros</option>
+                                    </Form.Select>
                                 </Col>
                             </Form.Group>
-
                             <Form.Group as={Row} className="mb-3">
                                 <Form.Label column lg={2}>
-                                    Tel
+                                    Usuario
                                 </Form.Label>
                                 <Col lg={10}>
-                                    <Form.Control type="tel" name="tel" />
+                                    <Form.Select>
+                                        <option>Remitente</option>
+                                        <option>Destinatario</option>
+                                        <option>Persona contacto</option>
+                                    </Form.Select>
                                 </Col>
                             </Form.Group>
-
+                            <Form.Group as={Row} className="mb-3">
+                                <Form.Label column lg={2} htmlFor="simpleinput">
+                                    Carpeta
+                                </Form.Label>
+                                <Col lg={10}>
+                                    <Form.Control type="text" id="simpleinput" defaultValue="Carpeta" />
+                                </Col>
+                            </Form.Group>
                             <Form.Group as={Row} className="mb-3">
                                 <Form.Label column lg={2} htmlFor="example-color">
                                     Color
@@ -221,15 +211,6 @@ const BasicInputElements = () => {
                                         className="w-100"
                                         defaultValue="#5369f8"
                                     />
-                                </Col>
-                            </Form.Group>
-
-                            <Form.Group as={Row} className="mb-0">
-                                <Form.Label column lg={2} htmlFor="example-range">
-                                    Range
-                                </Form.Label>
-                                <Col lg={10}>
-                                    <Form.Range className="mt-1" name="range" />
                                 </Col>
                             </Form.Group>
                         </Col>
