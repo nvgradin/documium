@@ -21,13 +21,13 @@ const ServerError = () => {
 
                 <Row>
                     <Col xs={12} className="text-center">
-                        <h3 className="mt-3">Opps, something went wrong</h3>
+                        <h3 className="mt-3">Opps, algo salió mal</h3>
                         <p className="text-muted mb-4">
-                            Server Error 500. We apoligise and are fixing the problem.
-                            <br /> Please try again at a later stage.
+                        Error del servidor 500. Nos disculpamos y estamos solucionando el problema.
+                            <br /> Vuelva a intentarlo posteriormente.
                         </p>
                         <Link to="/" className="btn btn-lg btn-primary">
-                            Take me back to Home
+                            Volvamos al Dashboard
                         </Link>
                     </Col>
                 </Row>

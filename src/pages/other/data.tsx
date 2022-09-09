@@ -115,18 +115,18 @@ const pricingPlans: PlanItemsTypes[] = [
 const maintenanceQuery: MaintenanceQueryTypes[] = [
     {
         icon: 'uil-presentation-lines-alt',
-        title: 'Why is the Site Down?',
-        desc: 'If several languages coalesce, the grammar of the resulting language is more simple.',
+        title: '¿Porque está el sitio caído?',
+        desc: 'Las actualizaciones y mejoras pueden necesitar integrarse por completo.',
     },
     {
         icon: 'uil-clock-eight',
-        title: 'What is the Downtime?',
-        desc: 'Everyone realizes why a new common language would be desirable one could refuse.',
+        title: '¿Qué es el tiempo de inactividad?',
+        desc: 'En ocasiones las integraciones e implementaciones entres los lenguajes y herramientas de la web necesita actualizar y ajustarse en un momento donde se aplican y guardan.',
     },
     {
         icon: 'uil-envelope',
-        title: 'Do you need Support?',
-        desc: "You need to be sure there isn't anything embar.. Please contact us via email no-reply@domain.com",
+        title: '¿Necesitas soporte?',
+        desc: "Contacta con nosotros a través del correo electrónico hola@nazarethgradin.com",
     },
 ];
 

@@ -24,9 +24,9 @@ const Maintenance = () => {
 
                 <Row>
                     <Col xs={12} className="text-center">
-                        <h3 className="mt-5">We are currently performing maintenance</h3>
+                        <h3 className="mt-5">Estamos realizando tareas de mantenimiento.</h3>
                         <p className="text-muted">
-                            We're making the system more awesome. <br /> We'll be back shortly.
+                           Estamos haciendo que el sistema sea mejor. <br /> Regresaremos en un momento. ¡Gracias!
                         </p>
                     </Col>
                 </Row>

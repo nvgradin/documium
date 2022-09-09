@@ -65,26 +65,6 @@ const MENU_ITEMS: MenuItemTypes[] = [
             },
         ],
     },
-    {
-        key: 'apps-tasks',
-        label: 'Tasks',
-        isTitle: false,
-        icon: 'clipboard',
-        children: [
-            {
-                key: 'task-list',
-                label: 'List',
-                url: '/apps/tasks/list',
-                parentKey: 'apps-tasks',
-            },
-            {
-                key: 'task-kanban',
-                label: 'Kanban Board',
-                url: '/apps/tasks/kanban',
-                parentKey: 'apps-tasks',
-            },
-        ],
-    },
 
     { key: 'custom', label: 'Custom', isTitle: true },
     {
@@ -97,12 +77,6 @@ const MENU_ITEMS: MenuItemTypes[] = [
                 key: 'page-profile',
                 label: 'Profile',
                 url: '/pages/profile',
-                parentKey: 'extra-pages',
-            },
-            {
-                key: 'page-activity',
-                label: 'Activity',
-                url: '/pages/activity',
                 parentKey: 'extra-pages',
             },
             {

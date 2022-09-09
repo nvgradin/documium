@@ -21,14 +21,14 @@ const Error404 = () => {
 
                 <Row>
                     <Col xs={12} className="text-center">
-                        <h3 className="mt-3">We couldn’t connect the dots</h3>
+                        <h3 className="mt-3">Vaya, no encontramoslo que buscas.</h3>
                         <p className="text-muted mb-4">
-                            This page was not found.
+                        Esta página no fue encontrada.
                             <br />
-                            You may have mistyped the address or the page may have moved.
+                            Es posible que haya escrito mal la dirección o que la página se haya movido.
                         </p>
                         <Link to="/" className="btn btn-lg btn-primary">
-                            Take me back to Home
+                        Volvamos al Dashboard
                         </Link>
                     </Col>
                 </Row>
