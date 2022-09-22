@@ -18,7 +18,7 @@ export function configureFakeBackend() {
     let users: UserData[] = [
         {
             id: 1,
-            email: 'shreyu@coderthemes.com',
+            email: 'hola@documium.com',
             username: 'test',
             password: 'test',
             firstName: 'Test',

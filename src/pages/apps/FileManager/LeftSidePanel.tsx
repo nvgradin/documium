@@ -58,26 +58,6 @@ const LeftSidePanel = () => {
                 </Link>
             </div>
 
-            <Card className="mt-4 mb-0 border-0">
-                <div className="p-2 text-center">
-                    <strong className="me-2">Your Storage</strong>
-                </div>
-
-                <Card.Body>
-                    <Chart
-                        options={apexOpts}
-                        series={apexData}
-                        type="radialBar"
-                        height={225}
-                        className="apex-charts mt-0"
-                    />
-                </Card.Body>
-
-                <div className="fs-13 text-center">
-                    <strong className="me-2">File Manager</strong>
-                    <p className="text-muted mb-0">107.52 GB of 256 GB</p>
-                </div>
-            </Card>
         </Card>
     );
 };

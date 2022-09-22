@@ -1,8 +1,10 @@
 import React from 'react';
 import { Row, Col, Card, Form, FloatingLabel, InputGroup, Button } from 'react-bootstrap';
+import Select from 'react-select';
 
 // components
 import PageTitle from '../../components/PageTitle';
+import FileUploader from '../../components/FileUploader';
 
 const BasicInputElements = () => {
     return (
@@ -12,7 +14,6 @@ const BasicInputElements = () => {
                 <p className="sub-header">
                     Registro nuevo de documento
                 </p>
-
                 <Form className="form-horizontal">
                     <Row>
                         <Col md={6}>
@@ -53,26 +54,6 @@ const BasicInputElements = () => {
                                 </Col>
                             </Form.Group>
                             <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2}>
-                                    Empresa
-                                </Form.Label>
-                                <Col lg={10}>
-                                    <Form.Select>
-                                        <option>JJ.Gradín</option>
-                                        <option>SIAL S.A.</option>
-                                        <option>Grupo Gradín</option>
-                                        <option>Horposa</option>
-                                        <option>A Granxa</option>
-                                        <option>Contrac</option>
-                                        <option>Jurídico</option>
-                                        <option>Laboral</option>
-                                        <option>OTS</option>
-                                        <option>Parque Emp. do Fulao</option>
-                                        <option>Seguros</option>
-                                    </Form.Select>
-                                </Col>
-                            </Form.Group>
-                            <Form.Group as={Row} className="mb-3">
                                 <Form.Label column lg={2} htmlFor="example-textarea">
                                     Notas
                                 </Form.Label>
@@ -82,7 +63,7 @@ const BasicInputElements = () => {
                             </Form.Group> 
                             <Form.Group as={Row} className="mb-3">
                                 <Form.Label column lg={2} htmlFor="example-email">
-                                    Contactos relacionados
+                                    Contactos
                                 </Form.Label>
                                 <Col lg={10}>
                                     <Form.Control
@@ -95,7 +76,7 @@ const BasicInputElements = () => {
                             </Form.Group>
                             <Form.Group as={Row} className="mb-3">
                                 <Form.Label column lg={2} htmlFor="example-email">
-                                    Emails relacionados
+                                    Emails
                                 </Form.Label>
                                 <Col lg={10}>
                                      <Form.Control type="email" placeholder="name@example.com" />
@@ -119,12 +100,31 @@ const BasicInputElements = () => {
                             </Form.Group>
                         </Col>
                         <Col md={6}>
-                            <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2} htmlFor="example-fileinput">
-                                    Subir archivo
+                        <Form.Group as={Row} className="mb-3">
+                                <Form.Label column lg={2}>
+                                    Remitente / Destinatario
                                 </Form.Label>
                                 <Col lg={10}>
-                                    <Form.Control type="file" id="example-fileinput" />
+                                <Form.Control
+                                        type="text"
+                                        id="organizaciones"
+                                        name="organizaciones"
+                                        placeholder="Añade remitente o destinatario"
+                                    />
+                                </Col>
+                            </Form.Group>
+                        <Form.Group as={Row} className="mb-3">
+                                <Form.Label column lg={2}>
+                                    Empresa
+                                </Form.Label>
+                                <Col lg={10}>
+                                    <Form.Select>
+                                        <option>JJ.Gradín</option>
+                                        <option>SIAL</option>
+                                        <option>Grupo Gradín</option>
+                                        <option>Horposa</option>
+                                        <option>A Granxa</option>
+                                    </Form.Select>
                                 </Col>
                             </Form.Group>
                             <Form.Group as={Row} className="mb-3">
@@ -173,6 +173,7 @@ const BasicInputElements = () => {
                                         <option>Contrato</option>
                                         <option>Email</option>
                                         <option>Escrituras</option>
+                                        <option>Facturas</option>
                                         <option>Planos</option>
                                         <option>Presupuestos</option>
                                         <option>Otros</option>
@@ -180,40 +181,42 @@ const BasicInputElements = () => {
                                 </Col>
                             </Form.Group>
                             <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2}>
-                                    Usuario
-                                </Form.Label>
-                                <Col lg={10}>
-                                    <Form.Select>
-                                        <option>Remitente</option>
-                                        <option>Destinatario</option>
-                                        <option>Persona contacto</option>
-                                    </Form.Select>
-                                </Col>
-                            </Form.Group>
-                            <Form.Group as={Row} className="mb-3">
                                 <Form.Label column lg={2} htmlFor="simpleinput">
-                                    Carpeta
+                                    Tags
                                 </Form.Label>
                                 <Col lg={10}>
-                                    <Form.Control type="text" id="simpleinput" defaultValue="Carpeta" />
+                                    <Form.Control type="text" id="simpleinput" defaultValue="Tags" />
                                 </Col>
                             </Form.Group>
                             <Form.Group as={Row} className="mb-3">
                                 <Form.Label column lg={2} htmlFor="example-color">
-                                    Color
+                                    Permisos
                                 </Form.Label>
                                 <Col lg={10}>
-                                    <Form.Control
-                                        id="example-color"
-                                        type="color"
-                                        name="color"
-                                        className="w-100"
-                                        defaultValue="#5369f8"
-                                    />
+                                    <Select
+                                        isMulti={true}
+                                        options={[
+                                            { value: 'publico', label: 'Público' },
+                                            { value: 'privado', label: 'Privado' },
+                                            { value: 'user1', label: 'Usuario 1' },
+                                            { value: 'user2', label: 'Usuario 2' },
+                                        ]}
+                                        className="react-select react-select-container"
+                                        classNamePrefix="react-select" placeholder="Selecciona permisos"></Select>
                                 </Col>
+
                             </Form.Group>
                         </Col>
+                        <FileUploader
+                                onFileUpload={(files) => {
+                                    console.log('Uploaded files - ', files);
+                                }}
+                            />
+                                                            <div className="clearfix text-end mt-3">
+                                    <Button variant="success">
+                                        <i className="uil uil-arrow-right me-1"></i> Subir
+                                    </Button>
+                                  </div>
                     </Row>
                 </Form>
             </Card.Body>
@@ -391,43 +394,6 @@ const BasicForms = () => {
             <Row>
                 <Col xs={12}>
                     <BasicInputElements />
-                </Col>
-            </Row>
-
-            <Row>
-                <Col md={6}>
-                    <Card>
-                        <Card.Body>
-                            <SelectInput />
-                            <Switches />
-                        </Card.Body>
-                    </Card>
-                </Col>
-
-                <Col md={6}>
-                    <Card>
-                        <Card.Body>
-                            <CheckboxesRadios />
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-
-            <Row>
-                <Col md={6}>
-                    <Card>
-                        <Card.Body>
-                            <FloatingLabels />
-                        </Card.Body>
-                    </Card>
-                </Col>
-
-                <Col md={6}>
-                    <Card>
-                        <Card.Body>
-                            <FloatingTextareaSelects />
-                        </Card.Body>
-                    </Card>
                 </Col>
             </Row>
         </React.Fragment>

@@ -25,25 +25,19 @@ const MENU_ITEMS: MenuItemTypes[] = [
     },
     {
         key: 'apps-file-manager',
-        label: 'Gestión de documentos',
+        label: 'Documentos',
         isTitle: false,
-        icon: 'file',
+        icon: 'folder',
         url: '/apps/file-manager',
     },
     {
         key: 'form-basic',
-        label: 'Subir Archivo',
+        label: 'Añadir Archivo',
         url: '/forms/basic',
         icon: 'file-plus',
         parentKey: 'forms',
     },
-    {
-        key: 'form-upload',
-        label: 'File Uploads',
-        url: '/forms/upload',
-        icon: 'file-plus',
-        parentKey: 'forms',
-    },
+    
     { key: 'apps', label: 'Apps', isTitle: true },
     {
         key: 'apps-projects',
@@ -66,40 +60,6 @@ const MENU_ITEMS: MenuItemTypes[] = [
         ],
     },
 
-    { key: 'custom', label: 'Custom', isTitle: true },
-    {
-        key: 'extra-pages',
-        label: 'Pages',
-        isTitle: false,
-        icon: 'file-text',
-        children: [
-            {
-                key: 'page-profile',
-                label: 'Profile',
-                url: '/pages/profile',
-                parentKey: 'extra-pages',
-            },
-            {
-                key: 'page-maintenance',
-                label: 'Maintenance',
-                url: '/maintenance',
-                target: '_blank',
-                parentKey: 'extra-pages',
-            },
-            {
-                key: 'page-error-404',
-                label: 'Error - 404',
-                url: '/error-404',
-                parentKey: 'extra-pages',
-            },
-            {
-                key: 'page-error-500',
-                label: 'Error - 500',
-                url: '/error-500',
-                parentKey: 'extra-pages',
-            },
-        ],
-    },
     { key: 'components', label: 'Components', isTitle: true },
     {
         key: 'ui-elements',

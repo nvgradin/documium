@@ -22,7 +22,7 @@ const FileManager = () => {
                     { label: 'Apps', path: '/apps/file-manager' },
                     { label: 'File Manager', path: '/apps/file-manager', active: true },
                 ]}
-                title={'Gestión de Documentos'}
+                title={'Documentos'}
             />
             <Row>
                 <Col>

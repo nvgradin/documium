@@ -15,19 +15,19 @@ export interface RecentFileTypes {
 const folderDetails: folderDetailTypes[] = [
     {
         icon: 'bi bi-file-earmark-zip',
-        name: 'Shreyu-admin.zip',
+        name: 'Facturas',
         size: '2.3 MB',
         variant: 'warning',
     },
     {
         icon: 'bi bi-images',
-        name: 'Pictures',
+        name: 'Licencias',
         size: '17.3 GB',
         variant: 'danger',
     },
     {
         icon: 'bi bi-file-earmark-pdf',
-        name: 'Licence.pdf',
+        name: 'Contrataciones',
         size: '3.9 MB',
         variant: 'danger',
     },
