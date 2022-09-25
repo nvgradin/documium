@@ -46,12 +46,6 @@ const MENU_ITEMS: MenuItemTypes[] = [
         icon: 'briefcase',
         children: [
             {
-                key: 'project-list',
-                label: 'List',
-                url: '/apps/projects/list',
-                parentKey: 'apps-projects',
-            },
-            {
                 key: 'project-details',
                 label: 'Details',
                 url: '/apps/projects/details',

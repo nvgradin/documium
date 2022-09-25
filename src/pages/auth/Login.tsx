@@ -156,21 +156,6 @@ const Login = () => {
                     </div>
                 </VerticalForm>
 
-                <div className="py-3 text-center">
-                    <span className="fs-16 fw-bold">{t('OR')}</span>
-                </div>
-                <Row>
-                    <Col xs={12} className="text-center">
-                        <Link to="#" className="btn btn-white mb-2 mb-sm-0 me-1">
-                            <i className="uil uil-google icon-google me-2"></i>
-                            {t('With Google')}
-                        </Link>
-                        <Link to="#" className="btn btn-white mb-2 mb-sm-0">
-                            <i className="uil uil-facebook me-2 icon-fb"></i>
-                            {t('With Facebook')}
-                        </Link>
-                    </Col>
-                </Row>
             </AuthLayout>
         </>
     );
