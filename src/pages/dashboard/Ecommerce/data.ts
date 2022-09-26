@@ -8,7 +8,6 @@ import profilePic2 from '../../../assets/images/users/avatar-5.jpg';
 
 // types
 import { MembersTypes } from '../../../components/MembersList';
-import { TaskItemTypes } from '../../../components/Tasks';
 import { MessageItemTypes } from '../../../components/ChatList';
 
 export interface OrdersItemTypes {
@@ -90,43 +89,7 @@ const topPerformers: MembersTypes[] = [
     },
 ];
 
-const tasks: TaskItemTypes[] = [
-    {
-        id: 1,
-        title: 'Draft the new contract document for sales team',
-        dueDate: '24 Aug, 2019',
-    },
-    {
-        id: 2,
-        title: 'iOS App home page',
-        dueDate: '23 Aug, 2019',
-    },
-    {
-        id: 3,
-        title: 'Write a release note for Shreyu',
-        dueDate: '22 Aug, 2019',
-    },
-    {
-        id: 4,
-        title: 'Invite Greeva to a project shreyu admin',
-        dueDate: '21 Aug, 2019',
-    },
-    {
-        id: 5,
-        title: 'Enable analytics tracking for main website',
-        dueDate: '20 Aug, 2019',
-    },
-    {
-        id: 6,
-        title: 'Invite user to a project',
-        dueDate: '18 Aug, 2019',
-    },
-    {
-        id: 7,
-        title: 'Write a release note',
-        dueDate: '18 Aug, 2019',
-    },
-];
+
 const chatMessages: MessageItemTypes[] = [
     {
         id: 1,
@@ -165,4 +128,4 @@ const chatMessages: MessageItemTypes[] = [
     },
 ];
 
-export { orderDetails, topPerformers, tasks, chatMessages };
+export { orderDetails, topPerformers, chatMessages };

@@ -15,10 +15,7 @@ import { LayoutTypes, SideBarTypes } from '../constants/layout';
 
 // components
 import TopbarSearch from '../components/TopbarSearch';
-import MaximizeScreen from '../components/MaximizeScreen';
-import AppsDropdown from '../components/AppsDropdown/';
 import SearchDropdown from '../components/SearchDropdown';
-import LanguageDropdown from '../components/LanguageDropdown';
 import NotificationDropdown from '../components/NotificationDropdown';
 import ProfileDropdown from '../components/ProfileDropdown';
 import CreateNew from '../components/CreateNew';
@@ -229,15 +226,6 @@ const Topbar = ({ hideLogo, navCssClasses, openLeftMenuCallBack, topbarDark }: T
                         <li className="dropdown d-inline-block d-lg-none">
                             <SearchDropdown />
                         </li>
-                        { /*<li className="dropdown d-none d-lg-inline-block">
-                            <MaximizeScreen />
-                        </li>
-                       <li className="dropdown d-none d-lg-inline-block topbar-dropdown">
-                            <AppsDropdown />
-                        </li>
-                        <li className="dropdown d-none d-lg-inline-block topbar-dropdown">
-                            <LanguageDropdown />
-                        </li>*/}
                         <li className="dropdown notification-list topbar-dropdown">
                             <NotificationDropdown notifications={Notifications} />
                         </li>

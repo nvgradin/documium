@@ -5,10 +5,8 @@ import FeatherIcon from 'feather-icons-react';
 // components
 import ShreyuDatepicker from '../../../components/Datepicker';
 import MembersList from '../../../components/MembersList';
-import Tasks from '../../../components/Tasks';
 
 // dummy data
-import { tasks, } from './data';
 
 const EcommerceDashboard = () => {
     const [dateRange, setDateRange] = useState<any>([new Date(), new Date().setDate(new Date().getDate() + 7)]);
@@ -107,7 +105,6 @@ const EcommerceDashboard = () => {
                     
                 </Col>
                 <Col xl={4}>
-                    <Tasks tasks={tasks} />
                 </Col>
                 <Col xl={4}>
                     

@@ -5,17 +5,15 @@ import { Col, Row } from 'react-bootstrap';
 import PageTitle from '../../components/PageTitle';
 import MembersList from '../../components/MembersList';
 import ChatList from '../../components/ChatList';
-import Tasks from '../../components/Tasks';
 
 import ProfileCard1 from './UserProfile/ProfileCard1';
 import ProfileCard2 from './UserProfile/ProfileCard2';
 import ProfileCard3 from './UserProfile/ProfileCard3';
 import ProfileCard4 from './UserProfile/ProfileCard4';
-import OverView from './OverView';
 import Activities from './Activities';
 
 // dummy data
-import { topPerformers, chatMessages, tasks } from '../dashboard/Ecommerce/data';
+import { topPerformers, chatMessages } from '../dashboard/Ecommerce/data';
 
 import { activities } from './data';
 
@@ -56,12 +54,7 @@ const Widgets = () => {
                 <Col xxl={4} md={7}>
                     <ChatList title="Team Chat" messages={chatMessages} />
                 </Col>
-
-                <Col xxl={4} md={4}>
-                    <OverView />
-                </Col>
                 <Col xxl={4} md={6}>
-                    <Tasks tasks={tasks} />
                 </Col>
                 <Col xxl={4} md={6}>
                     <Activities activities={activities} />
