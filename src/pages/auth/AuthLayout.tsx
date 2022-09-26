@@ -35,12 +35,12 @@ const AuthLayout = ({ bottomLinks, children }: AccountLayoutProps) => {
                                                 <div className="overlay"></div>
                                                 <div className="auth-user-testimonial">
                                                     <p className="fs-24 fw-bold text-white mb-1">
-                                                        {t('I simply love it!')}
+                                                        {t('¿Empezamos?')}
                                                     </p>
                                                     <p className="lead">
-                                                        "{t("It's a elegent templete. I love it very much!")}"
+                                                        "{t("Cada forma de clasificar una cosa es solamente una manera de manejarla para un cierto propósito particular.")}"
                                                     </p>
-                                                    <p>- {t('Admin User')}</p>
+                                                    <p>- {t('William James')}</p>
                                                 </div>
                                             </div>
                                         </Col>
