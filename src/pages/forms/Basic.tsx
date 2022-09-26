@@ -54,77 +54,16 @@ const BasicInputElements = () => {
                                 </Col>
                             </Form.Group>
                             <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2} htmlFor="example-textarea">
-                                    Notas
-                                </Form.Label>
-                                <Col lg={10}>
-                                    <Form.Control as="textarea" rows={5} id="notas" placeholder="Añadir información adiccional" />
-                                </Col>
-                            </Form.Group> 
-                            <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2} htmlFor="example-email">
-                                    Contactos
-                                </Form.Label>
-                                <Col lg={10}>
-                                    <Form.Control
-                                        type="text"
-                                        id="contactos-relacionados"
-                                        name="example-email"
-                                        placeholder="Contacto"
-                                    />
-                                </Col>
-                            </Form.Group>
-                            <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2} htmlFor="example-email">
-                                    Emails
-                                </Form.Label>
-                                <Col lg={10}>
-                                     <Form.Control type="email" placeholder="name@example.com" />
-                                </Col>
-                            </Form.Group>
-                            <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2}>
-                                    Tel
-                                </Form.Label>
-                                <Col lg={10}>
-                                    <Form.Control type="tel" name="tel" placeholder="Añadir Teléfono"/>
-                                </Col>
-                            </Form.Group>
-                            <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2}>
-                                    Web
-                                </Form.Label>
-                                <Col lg={10}>
-                                    <Form.Control type="url" name="url" placeholder="Añadir Web"/>
-                                </Col>
-                            </Form.Group>
-                        </Col>
-                        <Col md={6}>
-                        <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2}>
+                                <Form.Label column lg={4}>
                                     Remitente / Destinatario
                                 </Form.Label>
-                                <Col lg={10}>
+                                <Col lg={8}>
                                 <Form.Control
                                         type="text"
                                         id="organizaciones"
                                         name="organizaciones"
                                         placeholder="Añade remitente o destinatario"
                                     />
-                                </Col>
-                            </Form.Group>
-                        <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2}>
-                                    Empresa
-                                </Form.Label>
-                                <Col lg={10}>
-                                    <Form.Select>
-                                        <option>JJ.Gradín</option>
-                                        <option>SIAL</option>
-                                        <option>Grupo Gradín</option>
-                                        <option>Horposa</option>
-                                        <option>A Granxa</option>
-                                    </Form.Select>
                                 </Col>
                             </Form.Group>
                             <Form.Group as={Row} className="mb-3">
@@ -143,6 +82,24 @@ const BasicInputElements = () => {
                                     <Form.Control id="example-date" type="date" name="date" />
                                 </Col>
                             </Form.Group>
+                            
+                        </Col>
+                        <Col md={6}>
+                        <Form.Group as={Row} className="mb-3">
+                                <Form.Label column lg={2}>
+                                    Empresa
+                                </Form.Label>
+                                <Col lg={10}>
+                                    <Form.Select>
+                                        <option>JJ.Gradín</option>
+                                        <option>SIAL</option>
+                                        <option>Grupo Gradín</option>
+                                        <option>Horposa</option>
+                                        <option>A Granxa</option>
+                                    </Form.Select>
+                                </Col>
+                            </Form.Group>
+                        
                             <Form.Group as={Row} className="mb-3">
                                 <Form.Label column lg={2}>
                                     Área
@@ -181,14 +138,6 @@ const BasicInputElements = () => {
                                 </Col>
                             </Form.Group>
                             <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={2} htmlFor="simpleinput">
-                                    Tags
-                                </Form.Label>
-                                <Col lg={10}>
-                                    <Form.Control type="text" id="simpleinput" defaultValue="Tags" />
-                                </Col>
-                            </Form.Group>
-                            <Form.Group as={Row} className="mb-3">
                                 <Form.Label column lg={2} htmlFor="example-color">
                                     Permisos
                                 </Form.Label>
@@ -204,9 +153,24 @@ const BasicInputElements = () => {
                                         className="react-select react-select-container"
                                         classNamePrefix="react-select" placeholder="Selecciona permisos"></Select>
                                 </Col>
-
+                            </Form.Group>
+                            <Form.Group as={Row} className="mb-3">
+                                <Form.Label column lg={2} htmlFor="simpleinput">
+                                    Tags
+                                </Form.Label>
+                                <Col lg={10}>
+                                    <Form.Control type="text" id="simpleinput" defaultValue="Tags" />
+                                </Col>
                             </Form.Group>
                         </Col>
+                        <Form.Group as={Row} className="mb-3">
+                                <Form.Label column lg={2} htmlFor="example-textarea">
+                                    Notas Importantes
+                                </Form.Label>
+                                <Col lg={10}>
+                                    <Form.Control as="textarea" rows={3} id="notas" placeholder="Añadir información adiccional" />
+                                </Col>
+                            </Form.Group> 
                         <FileUploader
                                 onFileUpload={(files) => {
                                     console.log('Uploaded files - ', files);
@@ -214,7 +178,7 @@ const BasicInputElements = () => {
                             />
                                                             <div className="clearfix text-end mt-3">
                                     <Button variant="success">
-                                        <i className="uil uil-arrow-right me-1"></i> Subir
+                                    Subir<i className="uil uil-arrow-right me-1"></i> 
                                     </Button>
                                   </div>
                     </Row>
