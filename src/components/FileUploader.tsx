@@ -72,7 +72,7 @@ const FileUploader = (props: FileUploaderProps) => {
                             <div className="dz-message needsclick">
                                 <input {...getInputProps()} />
                                 <i className="h1 text-muted uil-cloud-upload"></i>
-                                <h3>Drop files here or click to upload.</h3>
+                                <h3>Arrastra aquí o haz click para añadir el archivo.</h3>
                                 <span className="text-muted ">
                                     (This is just a demo dropzone. Selected files are <strong>not</strong> actually
                                     uploaded.)

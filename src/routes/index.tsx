@@ -50,6 +50,7 @@ const BootstrapIcon = React.lazy(() => import('../pages/icons/Bootstrap/'));
 
 // forms
 const BasicForms = React.lazy(() => import('../pages/forms/Basic'));
+const ContactForms = React.lazy(() => import('../pages/forms/Contact'));
 const FormAdvanced = React.lazy(() => import('../pages/forms/Advanced'));
 const FormValidation = React.lazy(() => import('../pages/forms/Validation'));
 const FormWizard = React.lazy(() => import('../pages/forms/Wizard'));
@@ -212,6 +213,12 @@ const uiRoutes: RoutesProps = {
                     path: '/forms/basic',
                     name: 'Basic Elements',
                     component: BasicForms,
+                    route: PrivateRoute,
+                },
+                {
+                    path: '/forms/contact',
+                    name: 'Basic Contacts',
+                    component: ContactForms,
                     route: PrivateRoute,
                 },
                 {

@@ -37,6 +37,13 @@ const MENU_ITEMS: MenuItemTypes[] = [
         icon: 'file-plus',
         parentKey: 'forms',
     },
+    {
+        key: 'form-contact',
+        label: 'Añadir Contacto',
+        url: '/forms/contact',
+        icon: 'users',
+        parentKey: 'forms',
+    },
     
     { key: 'apps', label: 'Apps', isTitle: true },
     {
@@ -202,6 +209,12 @@ const HORIZONTAL_MENU_ITEMS: MenuItemTypes[] = [
                         key: 'form-basic',
                         label: 'Basic Elements',
                         url: '/forms/basic',
+                        parentKey: 'forms',
+                    },
+                    {
+                        key: 'form-contact',
+                        label: 'Añadir Contacto',
+                        url: '/forms/contact',
                         parentKey: 'forms',
                     },
                     {
@@ -546,6 +559,12 @@ const TWO_COl_MENU_ITEMS: MenuItemTypes[] = [
                         key: 'form-basic',
                         label: 'Basic Elements',
                         url: '/forms/basic',
+                        parentKey: 'forms',
+                    },
+                    {
+                        key: 'form-contact',
+                        label: 'Añadir Contacto',
+                        url: '/forms/contact',
                         parentKey: 'forms',
                     },
                     {
