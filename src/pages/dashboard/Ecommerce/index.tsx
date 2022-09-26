@@ -7,8 +7,6 @@ import ShreyuDatepicker from '../../../components/Datepicker';
 import MembersList from '../../../components/MembersList';
 import Tasks from '../../../components/Tasks';
 
-import Statistics from './Statistics';
-
 // dummy data
 import { tasks, } from './data';
 
@@ -83,8 +81,6 @@ const EcommerceDashboard = () => {
                     </div>
                 </Col>
             </Row>
-
-            <Statistics />
 
             <Row>
                 <Col xl={3}>

@@ -2,12 +2,6 @@
 import avatar1 from '../../assets/images/users/avatar-7.jpg';
 import avatar2 from '../../assets/images/users/avatar-9.jpg';
 
-export interface EventTypes {
-    id: number;
-    title: string;
-    time: string;
-}
-
 export interface ActivityTypes {
     id: number;
     avatar?: string;
@@ -16,28 +10,6 @@ export interface ActivityTypes {
     activityTitle: string;
     time: string;
 }
-const calendarEvents: EventTypes[] = [
-    {
-        id: 1,
-        title: 'UX Planning Meeting',
-        time: '7:30 AM - 10:00 AM',
-    },
-    {
-        id: 2,
-        title: 'Hyper v3 Scope Review',
-        time: '10:30 AM - 11:45 AM',
-    },
-    {
-        id: 3,
-        title: 'Ubold v4 Brainstorming',
-        time: '12:15 PM - 02:00 PM',
-    },
-    {
-        id: 4,
-        title: 'Shreyu React Planning',
-        time: '5:30 PM - 06:15 PM',
-    },
-];
 
 const activities: ActivityTypes[] = [
     {
@@ -69,4 +41,4 @@ const activities: ActivityTypes[] = [
     },
 ];
 
-export { calendarEvents, activities };
+export { activities };

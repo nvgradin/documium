@@ -61,7 +61,6 @@ const FileUpload = React.lazy(() => import('../pages/forms/FileUpload'));
 const Editors = React.lazy(() => import('../pages/forms/Editors'));
 
 // charts
-const Charts = React.lazy(() => import('../pages/charts/'));
 
 // tables
 const BasicTables = React.lazy(() => import('../pages/tables/Basic'));
@@ -271,12 +270,6 @@ const uiRoutes: RoutesProps = {
                     route: PrivateRoute,
                 },
             ],
-        },
-        {
-            path: '/components/charts',
-            name: 'Charts',
-            component: Charts,
-            route: PrivateRoute,
         },
         {
             path: '/tables',
