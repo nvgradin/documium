@@ -15,7 +15,7 @@ const Footer = () => {
 
                     <Col sm={6}>
                         <div className="text-sm-end footer-links d-none d-sm-block">
-                            <Link to="#">Contact Us</Link>
+                            <Link to="#">Grupo Gradín</Link>
                         </div>
                     </Col>
                 </Row>

@@ -24,9 +24,6 @@ const EcommerceDashboard = React.lazy(() => import('../pages/dashboard/Ecommerce
 const Projects = React.lazy(() => import('../pages/apps/Projects/'));
 const ProjectDetail = React.lazy(() => import('../pages/apps/Projects/Detail/'));
 
-// - tasks
-const TaskList = React.lazy(() => import('../pages/apps/Tasks/List/'));
-const Kanban = React.lazy(() => import('../pages/apps/Tasks/Board/'));
 // - file
 const FileManager = React.lazy(() => import('../pages/apps/FileManager'));
 
@@ -124,27 +121,6 @@ const projectAppRoutes: RoutesProps = {
     ],
 };
 
-const taskAppRoutes: RoutesProps = {
-    path: '/apps/tasks',
-    name: 'Tasks',
-    route: PrivateRoute,
-    roles: ['Admin'],
-    icon: 'clipboard',
-    children: [
-        {
-            path: '/apps/tasks/list',
-            name: 'Task List',
-            component: TaskList,
-            route: PrivateRoute,
-        },
-        {
-            path: '/apps/tasks/kanban',
-            name: 'Kanban',
-            component: Kanban,
-            route: PrivateRoute,
-        },
-    ],
-};
 
 const fileAppRoutes: RoutesProps = {
     path: '/apps/file-manager',
@@ -155,7 +131,7 @@ const fileAppRoutes: RoutesProps = {
     component: FileManager,
 };
 
-const appRoutes = [dashboardRoutes, projectAppRoutes, taskAppRoutes, fileAppRoutes];
+const appRoutes = [dashboardRoutes, projectAppRoutes, fileAppRoutes];
 
 // pages
 const extrapagesRoutes: RoutesProps = {
