@@ -22,7 +22,7 @@ const BasicInputElements = () => {
                                     Nombre
                                 </Form.Label>
                                 <Col lg={10}>
-                                    <Form.Control type="text" id="simpleinput" defaultValue="Nombre del Archivo..." />
+                                    <Form.Control type="text" id="simpleinput" placeholder="Nombre del Archivo..." />
                                 </Col>
                             </Form.Group>
                             <Form.Group as={Row} className="mb-3">
@@ -54,16 +54,17 @@ const BasicInputElements = () => {
                                 </Col>
                             </Form.Group>
                             <Form.Group as={Row} className="mb-3">
-                                <Form.Label column lg={4}>
-                                    Remitente / Destinatario
+                                <Form.Label column lg={2}>
+                                    Empresa Interna
                                 </Form.Label>
-                                <Col lg={8}>
-                                <Form.Control
-                                        type="text"
-                                        id="organizaciones"
-                                        name="organizaciones"
-                                        placeholder="Añade remitente o destinatario"
-                                    />
+                                <Col lg={10}>
+                                    <Form.Select>
+                                        <option>JJ.Gradín</option>
+                                        <option>SIAL</option>
+                                        <option>Grupo Gradín</option>
+                                        <option>Horposa</option>
+                                        <option>A Granxa</option>
+                                    </Form.Select>
                                 </Col>
                             </Form.Group>
                             <Form.Group as={Row} className="mb-3">
@@ -85,9 +86,23 @@ const BasicInputElements = () => {
                             
                         </Col>
                         <Col md={6}>
+                            
                         <Form.Group as={Row} className="mb-3">
                                 <Form.Label column lg={2}>
-                                    Empresa
+                                    Contacto
+                                </Form.Label>
+                                <Col lg={10}>
+                                <Form.Control
+                                        type="text"
+                                        id="organizaciones"
+                                        name="organizaciones"
+                                        placeholder="Añade remitente o destinatario"
+                                    />
+                                </Col>
+                            </Form.Group>
+                        <Form.Group as={Row} className="mb-3">
+                                <Form.Label column lg={2}>
+                                    Empresa Interna
                                 </Form.Label>
                                 <Col lg={10}>
                                     <Form.Select>
@@ -159,7 +174,7 @@ const BasicInputElements = () => {
                                     Tags
                                 </Form.Label>
                                 <Col lg={10}>
-                                    <Form.Control type="text" id="simpleinput" defaultValue="Tags" />
+                                    <Form.Control type="text" id="simpleinput" placeholder="Tags" />
                                 </Col>
                             </Form.Group>
                         </Col>
@@ -349,10 +364,10 @@ const BasicForms = () => {
         <React.Fragment>
             <PageTitle
                 breadCrumbItems={[
-                    { label: 'Forms', path: '/forms/basic' },
-                    { label: 'Basic Elements', path: '/forms/basic', active: true },
+                    { label: 'Registro', path: '/forms/basic' },
+                    { label: 'Documentos', path: '/forms/basic', active: true },
                 ]}
-                title={'Basic Elements'}
+                title={'Documentos'}
             />
 
             <Row>

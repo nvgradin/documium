@@ -84,7 +84,7 @@ const ContactInputElements = () => {
                                     Empresa
                                 </Form.Label>
                                 <Col lg={10}>
-                                    <Form.Control type="text" id="simpleinput" defaultValue="Nombre de Empresa..." />
+                                    <Form.Control type="text" id="simpleinput" placeholder="Nombre de Empresa..." />
                                 </Col>
                             </Form.Group> 
                             <Form.Group as={Row} className="mb-3">
@@ -97,7 +97,7 @@ const ContactInputElements = () => {
                             </Form.Group>
                             <Form.Group as={Row} className="mb-3">
                                 <Form.Label column lg={2} htmlFor="example-email">
-                                    Emails
+                                    Email
                                 </Form.Label>
                                 <Col lg={10}>
                                      <Form.Control type="email" placeholder="name@example.com" />
@@ -105,7 +105,7 @@ const ContactInputElements = () => {
                             </Form.Group>
                             <Form.Group as={Row} className="mb-3">
                                 <Form.Label column lg={2}>
-                                    Tel
+                                    Télefono
                                 </Form.Label>
                                 <Col lg={10}>
                                     <Form.Control type="tel" name="tel" placeholder="Añadir Teléfono"/>
@@ -164,9 +164,9 @@ const ContactForms = () => {
             <PageTitle
                 breadCrumbItems={[
                     { label: 'Formularios', path: '/forms/contact' },
-                    { label: 'Basic Contact', path: '/forms/contact', active: true },
+                    { label: 'Contactos', path: '/forms/contact', active: true },
                 ]}
-                title={'Basic Contact'}
+                title={'Contactos'}
             />
 
             <Row>

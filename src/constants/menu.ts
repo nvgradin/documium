@@ -32,14 +32,21 @@ const MENU_ITEMS: MenuItemTypes[] = [
     },
     {
         key: 'form-basic',
-        label: 'Añadir Archivo',
+        label: 'Nuevo Documento',
         url: '/forms/basic',
         icon: 'file-plus',
         parentKey: 'forms',
     },
     {
+        key: 'form-basic',
+        label: 'Nueva Carpeta',
+        url: '/forms/folder',
+        icon: 'folder-plus',
+        parentKey: 'forms',
+    },
+    {
         key: 'form-contact',
-        label: 'Añadir Contacto',
+        label: 'Contactos',
         url: '/forms/contact',
         icon: 'users',
         parentKey: 'forms',
@@ -213,7 +220,7 @@ const HORIZONTAL_MENU_ITEMS: MenuItemTypes[] = [
                     },
                     {
                         key: 'form-contact',
-                        label: 'Añadir Contacto',
+                        label: 'Contactos',
                         url: '/forms/contact',
                         parentKey: 'forms',
                     },

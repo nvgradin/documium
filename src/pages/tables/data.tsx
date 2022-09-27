@@ -19,9 +19,9 @@ const records: Records[] = [
     {
         id: 1,
         age: 32,
-        name: 'Burt',
+        name: 'XXXXXXX',
         company: 'Kaggle',
-        phone: '+1 (823) 532-2427',
+        phone: 'XXXXXXXXX',
     },
     {
         id: 2,
