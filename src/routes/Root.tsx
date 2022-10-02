@@ -13,7 +13,7 @@ const Root = () => {
         if (api.isUserAuthenticated() === false) {
             url = 'auth/login';
         } else {
-            url = 'dashboard/ecommerce';
+            url = 'apps/file-manager';
         }
         return url;
     };
