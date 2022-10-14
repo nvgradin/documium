@@ -16,25 +16,17 @@ export interface MenuItemTypes {
 const MENU_ITEMS: MenuItemTypes[] = [
 
     {
-        key: 'apps-file-manager',
-        label: 'Inicio',
+        key: 'gestor-documentos',
+        label: 'Gestor',
         isTitle: false,
-        icon: 'home',
+        icon: 'folder',
         url: '/apps/file-manager',
-        parentKey: 'dashboards',
     },
     {
-        key: 'form-basic',
+        key: 'registro-documentos',
         label: 'Nuevo Documento',
         url: '/forms/basic',
         icon: 'file-plus',
-        parentKey: 'forms',
-    },
-    {
-        key: 'form-basic',
-        label: 'Nueva Carpeta',
-        url: '/forms/folder',
-        icon: 'folder-plus',
         parentKey: 'forms',
     },
     {

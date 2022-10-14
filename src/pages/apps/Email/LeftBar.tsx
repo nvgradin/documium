@@ -166,7 +166,7 @@ const LeftBar = ({ totalUnreadEmails, chatUsers, showChatDetails }: LeftBarProps
                                 <img src={img1} alt="" className="avatar-sm rounded-circle" />
                             </div>
                             <div className="flex-grow-1 overflow-hidden">
-                                <h5 className="fs-14 m-0">Nik Patel</h5>
+                                <h5 className="fs-14 m-0">Grupo Gradín User</h5>
                                 <small className="text-muted">
                                     <i className="uil uil-circle fs-11 text-success"></i> Active Now
                                 </small>

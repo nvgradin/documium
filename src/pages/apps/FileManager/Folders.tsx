@@ -14,7 +14,7 @@ const Folders = ({ folderDetails }: QuickAccessProps) => {
     return (
         <Row>
             <Col xs={12}>
-                <h6 className="fs-18">Folders</h6>
+                <h6 className="fs-12">Carpetas</h6>
 
                 <Row>
                     {(folderDetails || []).map((f, i) => {
@@ -41,7 +41,7 @@ const Folders = ({ folderDetails }: QuickAccessProps) => {
                                                 <Link to="#" className="text-muted fw-bold fs-15">
                                                     {f.name}
                                                 </Link>
-                                                <p className="mb-0 fs-13">{f.size}</p>
+                                                <p className="mb-0 fs-13"></p>
                                             </Col>
                                         </Row>
                                     </div>

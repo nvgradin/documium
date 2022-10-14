@@ -62,7 +62,7 @@ const UserBox = () => {
                     as="a"
                     onClick={toggleDropdown}
                     className="cursor-pointer text-dark h5 mt-2 mb-1 d-block">
-                    Nik Patel
+                    Grupo Gradín
                 </Dropdown.Toggle>
                 <Dropdown.Menu className="user-pro-dropdown m-0">
                     {/* <div onClick={toggleDropdown}> */}

@@ -13,11 +13,10 @@ const AllRecentFiles = ({ recentFiles }: AllRecentFilesProps) => {
         <Table responsive className="table-nowrap table-centered mb-0">
             <thead>
                 <tr>
-                    <th className="border-0">File Name</th>
-                    <th className="border-0">Folder Name</th>
-                    <th className="border-0">File Size</th>
-                    <th className="border-0">Last viewed</th>
-                    <th className="border-0">Action</th>
+                    <th className="border-0">Documento</th>
+                    <th className="border-0">Carpeta</th>
+                    <th className="border-0">Última Visualización</th>
+                    <th className="border-0">Edicción</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,7 +25,6 @@ const AllRecentFiles = ({ recentFiles }: AllRecentFilesProps) => {
                         <tr key={index}>
                             <td>{file.name}</td>
                             <td>{file.folderName}</td>
-                            <td>{file.fileSize}</td>
                             <td>{file.lastviewed}</td>
                             <td>
                                 <Dropdown>
@@ -38,23 +36,23 @@ const AllRecentFiles = ({ recentFiles }: AllRecentFilesProps) => {
                                     <Dropdown.Menu align="end">
                                         <Dropdown.Item>
                                             <i className="uil uil-share-alt me-2 text-muted vertical-middle"></i>
-                                            Share
+                                            Compartir
                                         </Dropdown.Item>
                                         <Dropdown.Item>
                                             <i className="uil uil-link-h me-2 text-muted vertical-middle"></i>
-                                            Get Sharable Link
+                                            Obtener Link para compartir
                                         </Dropdown.Item>
                                         <Dropdown.Item>
                                             <i className="uil uil-pen me-2 text-muted vertical-middle"></i>
-                                            Rename
+                                            Renombrar
                                         </Dropdown.Item>
                                         <Dropdown.Item>
                                             <i className="uil uil-arrow-to-bottom me-2 text-muted vertical-middle"></i>
-                                            Download
+                                            Descargar
                                         </Dropdown.Item>
                                         <Dropdown.Item>
                                             <i className="uil uil-trash-alt me-2 text-muted vertical-middle"></i>
-                                            Remove
+                                            Eliminar
                                         </Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>

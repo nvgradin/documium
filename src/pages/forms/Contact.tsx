@@ -7,17 +7,37 @@ import PageTitle from '../../components/PageTitle';
 import Table from '../../components/Table';
 
 //dummy data
-import { records as data, expandableRecords } from '../tables/data';
+import { contactsRecords as contacts } from '../tables/data';
 
 const columns = [
     {
         Header: 'ID',
         accessor: 'id',
+        sort: false,
+    },
+    {
+        Header: 'Empresa',
+        accessor: 'Empresa',
         sort: true,
     },
     {
-        Header: 'Nombre',
-        accessor: 'name',
+        Header: 'CIF',
+        accessor: 'CIF',
+        sort: true,
+    },
+    {
+        Header: 'Contacto',
+        accessor: 'contacto',
+        sort: true,
+    },
+    {
+        Header: 'Dirección',
+        accessor: 'direccion',
+        sort: false,
+    },
+    {
+        Header: 'Email',
+        accessor: 'email',
         sort: true,
     },
     {
@@ -26,18 +46,8 @@ const columns = [
         sort: false,
     },
     {
-        Header: 'CIF',
-        accessor: 'cif',
-        sort: true,
-    },
-    {
         Header: 'Web',
         accessor: 'web',
-        sort: false,
-    },
-    {
-        Header: 'Contacto',
-        accessor: 'contacto',
         sort: false,
     },
     {
@@ -62,7 +72,7 @@ const sizePerPageList = [
     },
     {
         text: 'All',
-        value: data.length,
+        value: contacts.length,
     },
 ];
 
@@ -144,7 +154,7 @@ const ContactInputElements = () => {
 
                     <Table
                         columns={columns}
-                        data={data}
+                        data={contacts}
                         pageSize={10}
                         sizePerPageList={sizePerPageList}
                         isSortable={true}

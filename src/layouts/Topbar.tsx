@@ -83,14 +83,9 @@ const Notifications: NotificationItem[] = [
 // get the profilemenu
 const ProfileMenus = [
     {
-        label: 'My Account',
+        label: 'Mi Cuenta',
         icon: 'user',
         redirectTo: '/',
-    },
-    {
-        label: 'Lock Screen',
-        icon: 'lock',
-        redirectTo: '/auth/lock-screen',
     },
     {
         label: 'Logout',
@@ -230,7 +225,7 @@ const Topbar = ({ hideLogo, navCssClasses, openLeftMenuCallBack, topbarDark }: T
                             <NotificationDropdown notifications={Notifications} />
                         </li>
                         <li className="dropdown notification-list topbar-dropdown">
-                            <ProfileDropdown profilePic={profilePic} menuItems={ProfileMenus} username={'Nik Patel'} />
+                            <ProfileDropdown profilePic={profilePic} menuItems={ProfileMenus} username={'GG Usuario'} />
                         </li>
                         <li className="dropdown notification-list">
                             <button
