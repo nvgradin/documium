@@ -16,19 +16,12 @@ export interface MenuItemTypes {
 const MENU_ITEMS: MenuItemTypes[] = [
 
     {
-        key: 'ds-ecommerce',
+        key: 'apps-file-manager',
         label: 'Inicio',
         isTitle: false,
         icon: 'home',
-        url: '/dashboard/ecommerce',
-        parentKey: 'dashboards',
-    },
-    {
-        key: 'apps-file-manager',
-        label: 'Documentos',
-        isTitle: false,
-        icon: 'folder',
         url: '/apps/file-manager',
+        parentKey: 'dashboards',
     },
     {
         key: 'form-basic',

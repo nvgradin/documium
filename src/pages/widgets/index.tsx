@@ -28,31 +28,10 @@ const Widgets = () => {
                 title={'Widgets'}
             />
 
-            <h4 className="mb-3 pb-1">Profile/User</h4>
-
-            <Row>
-                <Col md={6} xxl={3}>
-                    <ProfileCard1 />
-                </Col>
-                <Col md={6} xxl={3}>
-                    <ProfileCard2 />
-                </Col>
-                <Col md={6} xxl={3}>
-                    <ProfileCard3 />
-                </Col>
-                <Col md={6} xxl={3}>
-                    <ProfileCard4 />
-                </Col>
-            </Row>
-
-            <h4 className="mb-3 pb-1">Team</h4>
-
             <Row>
                 <Col xxl={3} md={5}>
-                    <MembersList title={'Team Members'} members={topPerformers} />
                 </Col>
                 <Col xxl={4} md={7}>
-                    <ChatList title="Team Chat" messages={chatMessages} />
                 </Col>
                 <Col xxl={4} md={6}>
                 </Col>

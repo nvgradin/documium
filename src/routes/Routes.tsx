@@ -11,7 +11,6 @@ import { RootState } from '../redux/store';
 // All layouts containers
 import DefaultLayout from '../layouts/Default';
 import VerticalLayout from '../layouts/Vertical';
-import TwoColumnLayout from '../layouts/TwoColumn/';
 
 import { authProtectedFlattenRoutes, publicProtectedFlattenRoutes } from './index';
 
@@ -22,21 +21,7 @@ const Routes = (props: RoutesProps) => {
         layout: state.Layout,
     }));
 
-    const getLayout = () => {
-        let layoutCls = VerticalLayout;
-
-        switch (layout.layoutType) {
-            case LayoutTypes.LAYOUT_VERTICAL:
-                layoutCls = VerticalLayout;
-                break;
-            default:
-                layoutCls = TwoColumnLayout;
-                break;
-        }
-        return layoutCls;
-    };
-
-    let Layout = getLayout();
+    let Layout = VerticalLayout;
 
     return (
         <BrowserRouter>
