@@ -36,7 +36,13 @@ const MENU_ITEMS: MenuItemTypes[] = [
         icon: 'users',
         parentKey: 'forms',
     },
-    
+    {
+        key: 'papelera',
+        label: 'Papelera',
+        url: '/apps/file-manager/trash',
+        icon: 'trash',
+        parentKey: 'forms',
+    },    
     { key: 'apps', label: 'Apps', isTitle: true },
     {
         key: 'apps-projects',

@@ -4,11 +4,9 @@ import { Row, Col } from 'react-bootstrap';
 // components
 import PageTitle from '../../../components/PageTitle';
 
-import LeftSidePanel from './LeftSidePanel';
 import TopPanel from './TopPanel';
 import Folders from './Folders';
 import Recent from './Recent';
-import FileUploader from '../../../components/FileUploader';
 
 // dummy data
 import { folderDetails, recentFiles } from './data';
@@ -19,23 +17,19 @@ const FileManager = () => {
         <>
             <PageTitle
                 breadCrumbItems={[
-                    { label: 'Apps', path: '/apps/file-manager' },
-                    { label: 'File Manager', path: '/apps/file-manager', active: true },
+                    { label: 'Gestor', path: '/apps/file-manager' },
                 ]}
                 title={'Documentos'}
             />
             <Row>
                 <Col>
-                    <div className="email-container bg-transparent">
-                        {/* left sidebar */}
-                        <LeftSidePanel />
-
+                    <div className="bg-transparent">
                         {/* right side bar */}
                         <div className="inbox-rightbar h-100 pb-0">
                             <TopPanel />
 
                             {/* folder details */}
-                            <Folders folderDetails={folderDetails} />
+                            
                         </div>
 
                         {/* recent data */}

@@ -16,7 +16,7 @@ const TopPanel = () => {
     return (
         <>
             <Row>
-                <Col xs={12}>
+                <Col xs={18}>
                     <div className="d-block">
                         <div className="float-lg-end">
                             <div className="d-lg-flex align-items-center mb-2 mt-0">
@@ -27,7 +27,7 @@ const TopPanel = () => {
                                             <FormControl
                                                 type="text"
                                                 className="search-input bg-light border-0 mt-0"
-                                                placeholder="Search Files..."
+                                                placeholder="Buscar Archivos..."
                                             />
                                         </InputGroup>
                                     </form>
@@ -46,7 +46,7 @@ const TopPanel = () => {
                                         <Dropdown.Toggle variant="light">
                                             <OverlayTrigger
                                                 placement="top"
-                                                overlay={<Tooltip id="viewoptions">View Options</Tooltip>}>
+                                                overlay={<Tooltip id="viewoptions">Ver Opciones</Tooltip>}>
                                                 <span className="text-dark">
                                                     <i className="bi bi-caret-down"></i>
                                                 </span>
@@ -79,11 +79,6 @@ const TopPanel = () => {
                                                     overlay={<Tooltip id="newwindow">New Window</Tooltip>}>
                                                     <i className="bi bi-window me-2 fs-15"></i>
                                                 </OverlayTrigger>
-                                                <OverlayTrigger
-                                                    placement="top"
-                                                    overlay={<Tooltip id="newfolder">New Folder</Tooltip>}>
-                                                    <i className="bi bi-folder-plus fs-15"></i>
-                                                </OverlayTrigger>
                                             </Dropdown.Item>
                                             <Dropdown.Item>
                                                 Edit
@@ -112,20 +107,9 @@ const TopPanel = () => {
                                                         id="hiddenFiles"
                                                     />
                                                 </Form.Check>
-                                                Show Hidden Files
-                                            </Dropdown.Item>
-                                            <Dropdown.Item className="d-flex">
-                                                <Form.Check>
-                                                    <Form.Check.Input
-                                                        type="checkbox"
-                                                        className="me-2"
-                                                        id="hiddenFiles"
-                                                    />
-                                                </Form.Check>
                                                 Show Sidebar
                                             </Dropdown.Item>
                                             <Dropdown.Item>Help</Dropdown.Item>
-                                            <Dropdown.Item>About Files</Dropdown.Item>
                                         </Dropdown.Menu>
                                     </Dropdown>
                                 </ButtonGroup>
@@ -142,7 +126,7 @@ const TopPanel = () => {
                         </ButtonGroup>
                         <ButtonGroup className="mb-2">
                             <Button variant="light">
-                                <i className="bi bi-house me-2"></i>Home
+                                <i className="bi bi-house me-2"></i>Inicio
                             </Button>
                         </ButtonGroup>
                     </div>
