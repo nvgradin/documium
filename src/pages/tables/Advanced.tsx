@@ -107,6 +107,7 @@ const Advanced = () => {
                                 isSortable={true}
                                 pagination={true}
                                 isSearchable={true}
+                                isSelectable={true}
                             />
                         </Card.Body>
                     </Card>

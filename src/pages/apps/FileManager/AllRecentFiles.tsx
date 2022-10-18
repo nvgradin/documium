@@ -14,8 +14,9 @@ const AllRecentFiles = ({ recentFiles }: AllRecentFilesProps) => {
             <thead>
                 <tr>
                     <th className="border-0">Documento</th>
-                    <th className="border-0">Carpeta</th>
-                    <th className="border-0">Última Visualización</th>
+                    <th className="border-0">Empresa</th>
+                    <th className="border-0">Fechas</th>
+                    <th className="border-0">Contacto</th>
                     <th className="border-0">Edicción</th>
                 </tr>
             </thead>

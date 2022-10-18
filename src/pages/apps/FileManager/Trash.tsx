@@ -11,11 +11,11 @@ interface RecentProps {
     recentFiles: RecentFileTypes[];
 }
 
-const Recent = ({ recentFiles }: RecentProps) => {
+const Trash = ({ recentFiles }: RecentProps) => {
     return (
         <Row>
-            <Col xs={18}>
-                <h6 className="fs-18">Recientes</h6>
+            <Col xs={12}>
+                <h6 className="fs-18">Recent</h6>
 
                 <Card className="border-0">
                     <Card.Body>
@@ -26,7 +26,7 @@ const Recent = ({ recentFiles }: RecentProps) => {
                                         <span className="d-block d-sm-none">
                                             <i className="uil-home-alt"></i>
                                         </span>
-                                        <span className="d-none d-sm-block">Todas</span>
+                                        <span className="d-none d-sm-block">All</span>
                                     </Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item as="li">
@@ -68,4 +68,4 @@ const Recent = ({ recentFiles }: RecentProps) => {
     );
 };
 
-export default Recent;
+export default Trash;

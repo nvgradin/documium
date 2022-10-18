@@ -27,16 +27,25 @@ const MENU_ITEMS: MenuItemTypes[] = [
         label: 'Nuevo Documento',
         url: '/forms/basic',
         icon: 'file-plus',
-        parentKey: 'forms',
     },
     {
         key: 'form-contact',
         label: 'Contactos',
         url: '/forms/contact',
         icon: 'users',
-        parentKey: 'forms',
     },
-    
+    {
+        key: 'papelera',
+        label: 'Papelera',
+        url: '/apps/file-manager/trash',
+        icon: 'trash',
+    },    
+    {
+        key: 'page-profile',
+        label: 'Mi perfil',
+        url: '/pages/profile',
+        icon: 'user',
+    },
     { key: 'apps', label: 'Apps', isTitle: true },
     {
         key: 'apps-projects',
