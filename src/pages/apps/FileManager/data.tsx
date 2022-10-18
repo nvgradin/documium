@@ -37,8 +37,8 @@ const folderDetails: folderDetailTypes[] = [
         variant: 'info',
     },
     {
-        icon: 'Registros',
-        name: 'Songs',
+        icon: 'Registro X',
+        name: 'Registros',
         variant: 'info',
     },
 ];
