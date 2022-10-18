@@ -36,19 +36,13 @@ const OtherDetails = () => {
                     activeKey={activeTab}
                     onSelect={handleSelect}>
                     <Nav.Item as="li">
-                        <Nav.Link eventKey="activity">Activity</Nav.Link>
+                        <Nav.Link eventKey="activity">Actividad</Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li">
-                        <Nav.Link eventKey="messages">Messages</Nav.Link>
+                        <Nav.Link eventKey="micuenta">Mi cuenta</Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li">
-                        <Nav.Link eventKey="projects">Projects</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item as="li">
-                        <Nav.Link eventKey="tasks">Tasks</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item as="li">
-                        <Nav.Link eventKey="files">Files</Nav.Link>
+                        <Nav.Link eventKey="files">Documentos</Nav.Link>
                     </Nav.Item>
                 </Nav>
 
@@ -56,14 +50,8 @@ const OtherDetails = () => {
                     <Tab.Pane active={activeTab === 'activity'} eventKey="activity">
                         <Activity activityTimeline={activityTimeline} />
                     </Tab.Pane>
-                    <Tab.Pane active={activeTab === 'messages'} eventKey="messages">
-                        <Messages messages={messages} />
-                    </Tab.Pane>
-                    <Tab.Pane active={activeTab === 'projects'} eventKey="projects">
-                        <Projects projects={projects} />
-                    </Tab.Pane>
-                    <Tab.Pane active={activeTab === 'tasks'} eventKey="tasks">
-                        <Tasks tasks={[...todayTasks, ...upcomingTasks]} />
+                    <Tab.Pane active={activeTab === 'micuenta'} eventKey="micuenta">
+                        <Messages messages={micuenta} />
                     </Tab.Pane>
                     <Tab.Pane active={activeTab === 'files'} eventKey="files">
                         <Files files={files} />
