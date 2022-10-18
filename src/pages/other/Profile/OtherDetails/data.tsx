@@ -35,6 +35,13 @@ export interface FileItemTypes {
     previewImage?: string;
 }
 
+export interface MiCuentaTypes {
+    id?: number;
+    avatar?: string;
+    userName?: string;
+    email?: string;
+}
+
 const activityTimeline: ActivityItemTypes[] = [
     {
         id: 1,
@@ -158,6 +165,55 @@ const messages: MessageTypes[] = [
     },
 ];
 
+const micuenta: MiCuentaTypes[] = [
+    {
+        id: 1,
+        userName: 'Grupo Gradín',
+        avatar: user1,
+        email: 'grupogradin@grupogradin.com',
+    },
+    {
+        id: 2,
+        userName: 'Elena Gradín',
+        avatar: user2,
+        email: 'elena@grupogradin.com',
+    },
+    {
+        id: 3,
+        userName: 'Laura Gradín',
+        avatar: user3,
+        email: 'contabilidad@grupogradin.com',
+    },
+    {
+        id: 4,
+        userName: 'Susana Gradín',
+        avatar: user3,
+        email: 'gestion@grupogradin.com',
+    },
+    {
+        id: 5,
+        userName: 'Sonia Gradín',
+        email: 'agranxa@grupogradin.com',
+    },
+    {
+        id: 6,
+        userName: 'Sito',
+        avatar: user4,
+        email: 'soporte@grupogradin.com',
+    },
+    {
+        id: 7,
+        userName: 'Sinu',
+        email: 'administracion@grupogradin.com',
+    },
+    {
+        id: 8,
+        userName: 'Luis',
+        avatar: user5,
+        email: 'servicio@grupogradin.com',
+    },
+];
+
 const files: FileItemTypes[] = [
     {
         id: 1,
@@ -173,4 +229,4 @@ const files: FileItemTypes[] = [
     },
 ];
 
-export { activityTimeline, messages, files };
+export { activityTimeline, messages, micuenta, files };

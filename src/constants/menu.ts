@@ -23,6 +23,12 @@ const MENU_ITEMS: MenuItemTypes[] = [
         url: '/apps/file-manager',
     },
     {
+        key: 'page-profile',
+        label: 'Mi perfil',
+        url: '/pages/profile',
+        icon: 'user',
+    },
+    {
         key: 'registro-documentos',
         label: 'Nuevo Documento',
         url: '/forms/basic',
@@ -40,12 +46,6 @@ const MENU_ITEMS: MenuItemTypes[] = [
         url: '/apps/file-manager/trash',
         icon: 'trash',
     },    
-    {
-        key: 'page-profile',
-        label: 'Mi perfil',
-        url: '/pages/profile',
-        icon: 'user',
-    },
     { key: 'apps', label: 'Apps', isTitle: true },
     {
         key: 'apps-projects',

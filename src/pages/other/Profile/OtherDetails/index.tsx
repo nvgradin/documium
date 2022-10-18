@@ -3,6 +3,7 @@ import { Card, Tab, Nav } from 'react-bootstrap';
 
 // components
 import Activity from './Activity';
+import MiCuenta from './MiCuenta';
 import Messages from './Messages';
 import Projects from './Projects';
 import Tasks from './Tasks';
@@ -13,6 +14,7 @@ import { projects } from '../../../apps/Projects/data';
 import { todayTasks, upcomingTasks } from '../../../apps/Tasks/List/data';
 
 import { activityTimeline, messages, files } from './data';
+import {  micuenta } from './data';
 
 const OtherDetails = () => {
     const [activeTab, setactiveTab] = useState<string>('activity');
@@ -51,7 +53,7 @@ const OtherDetails = () => {
                         <Activity activityTimeline={activityTimeline} />
                     </Tab.Pane>
                     <Tab.Pane active={activeTab === 'micuenta'} eventKey="micuenta">
-                        <Messages messages={micuenta} />
+                        
                     </Tab.Pane>
                     <Tab.Pane active={activeTab === 'files'} eventKey="files">
                         <Files files={files} />
