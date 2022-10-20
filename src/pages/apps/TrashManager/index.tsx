@@ -13,9 +13,9 @@ const TrashManager = () => {
         <>
             <PageTitle
                 breadCrumbItems={[
-                    { label: 'Papelera', path: '/apps/trashmanager', active: true },
+                    { label: 'Papelera', path: '/apps/trashmanager'},
                 ]}
-                title={'Papalera'}
+                title={'Papelera'}
             />
 
             <Row>

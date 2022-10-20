@@ -11,11 +11,6 @@ import { contactsRecords as contacts } from '../tables/data';
 
 const columns = [
     {
-        Header: 'ID',
-        accessor: 'id',
-        sort: false,
-    },
-    {
         Header: 'Empresa',
         accessor: 'Empresa',
         sort: true,
@@ -31,11 +26,6 @@ const columns = [
         sort: true,
     },
     {
-        Header: 'Dirección',
-        accessor: 'direccion',
-        sort: false,
-    },
-    {
         Header: 'Email',
         accessor: 'email',
         sort: true,
@@ -48,11 +38,6 @@ const columns = [
     {
         Header: 'Web',
         accessor: 'web',
-        sort: false,
-    },
-    {
-        Header: 'Notas',
-        accessor: 'notas',
         sort: false,
     },
 ];

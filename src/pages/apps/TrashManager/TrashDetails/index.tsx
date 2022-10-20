@@ -10,7 +10,7 @@ import {  filetrash } from './data';
 
 // TrashManager
 const TrashDetails = () => {
-    const [activeTab, setactiveTab] = useState<string>('trash');
+    const [activeTab, setactiveTab] = useState<string>('filetrash');
 
     /**
      * handles tab activation
@@ -23,19 +23,8 @@ const TrashDetails = () => {
         <>
             <Card>
                 <Card.Body>
-                    <Nav
-                    as="ul"
-                    variant="pills"
-                    justify
-                    className="navtab-bg p-1"
-                    activeKey={activeTab}
-                    onSelect={handleSelect}>
-                    <Nav.Item as="li">
-                        <Nav.Link eventKey="trash">Papelera</Nav.Link>
-                    </Nav.Item>
-                    </Nav>
                     <Tab.Content>
-                        <Tab.Pane active={activeTab === 'trash'} eventKey="trash">
+                        <Tab.Pane active={activeTab === 'filetrash'} eventKey="filetrash">
                             <Trash filetrash={filetrash} />
                         </Tab.Pane>
                     </Tab.Content>

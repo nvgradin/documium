@@ -33,6 +33,27 @@ export interface ProjectTypes {
     owner?: string;
 }
 
+export interface DocumentTypes {
+    id: number;
+    title: string;
+    technology: string;
+    shortDesc?: string;
+    totalTasks?: number;
+    totalTasksCompleted?: number;
+    totalTeamSize?: number;
+    totalHoursSpent?: number;
+    totalComments?: number;
+    createUser: {
+        image?: string;
+        name: string;
+        variant?: string;
+    }[];
+    startDate?: string;
+    endDate?: string;
+    totalBudget?: string;
+    owner?: string;
+}
+
 export interface ActivityTypes {
     date: string;
     variant: string;
@@ -58,22 +79,6 @@ const projects: ProjectTypes[] = [
             {
                 image: user1,
                 name: 'Mat Helme',
-            },
-            {
-                image: user2,
-                name: 'Michael Zenaty',
-            },
-            {
-                image: user3,
-                name: 'James Anderson',
-            },
-            {
-                name: 'Helme',
-                variant: 'primary',
-            },
-            {
-                name: 'Helme',
-                variant: 'primary',
             },
         ],
         progress: 100,

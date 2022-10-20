@@ -1,5 +1,5 @@
-import project1 from '../../../assets/images/projects/project-1.jpg';
-import project2 from '../../../assets/images/projects/project-2.jpg';
+import project1 from '../../../../assets/images/projects/project-1.jpg';
+import project2 from '../../../../assets/images/projects/project-2.jpg';
 
 export interface FileTrashItemTypes {
     id?: number;

@@ -27,6 +27,9 @@ const ProjectDetail = React.lazy(() => import('../pages/apps/Projects/Detail/'))
 // - file
 const FileManager = React.lazy(() => import('../pages/apps/FileManager'));
 
+// - filetrash
+const TrashManager = React.lazy(() => import('../pages/apps/TrashManager'));
+
 // extra pages
 const Error404 = React.lazy(() => import('../pages/error/Error404'));
 const Error500 = React.lazy(() => import('../pages/error/Error500'));
@@ -132,7 +135,16 @@ const fileAppRoutes: RoutesProps = {
     component: FileManager,
 };
 
-const appRoutes = [dashboardRoutes, projectAppRoutes, fileAppRoutes];
+const trashAppRoutes: RoutesProps = {
+    path: '/apps/trashmanager',
+    name: 'Trash Manager',
+    route: PrivateRoute,
+    roles: ['Admin'],
+    icon: 'folder-plus',
+    component: TrashManager,
+};
+
+const appRoutes = [dashboardRoutes, projectAppRoutes, fileAppRoutes, trashAppRoutes];
 
 // pages
 const extrapagesRoutes: RoutesProps = {
