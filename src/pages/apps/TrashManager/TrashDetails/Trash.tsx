@@ -1,30 +1,33 @@
 import React from 'react';
-import classNames from 'classnames';
-import { Card, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { Row, Col, Card, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import classNames from 'classnames';
 
-// types
-import { FileItemTypes } from './data';
+// components
 
-interface FilesProps {
-    files: FileItemTypes[];
+// dummy data
+import {  FileTrashItemTypes } from './data';
+
+interface TrashProps {
+    filetrash: FileTrashItemTypes[];
 }
 
-const Files = ({ files }: FilesProps) => {
+
+const Trash = ({ filetrash }: TrashProps) => {
     return (
         <>
-            <h4 className="mt-1 fs-15 fw-bold text-uppercase">Documentos</h4>
-            {(files || []).map((file, index) => {
+            <h6 className="fs-18">Papelera</h6>
+            {(filetrash || []).map((filetrash, index) => {
                 return (
                     <Card key={index} className={classNames('mb-2', 'shadow-none', 'border', { 'mt-3': index === 0 })}>
                         <div className="p-1 px-2">
                             <div className="row align-items-center">
                                 <div className="col-auto">
-                                    <img src={file.previewImage} className="avatar-sm rounded" alt="" />
+                                    <img src={filetrash.previewImage} className="avatar-sm rounded" alt="" />
                                 </div>
                                 <div className="col ps-0">
                                     <Link to="#" className="text-muted fw-bold">
-                                        {file.fileName}
+                                        {filetrash.fileName}
                                     </Link>
                                 </div>
                                 <div className="col-auto">
@@ -49,8 +52,8 @@ const Files = ({ files }: FilesProps) => {
                     </Card>
                 );
             })}
-        </>
+        </>        
     );
 };
 
-export default Files;
+export default Trash;

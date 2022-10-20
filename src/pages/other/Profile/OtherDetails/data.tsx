@@ -42,6 +42,14 @@ export interface MiCuentaTypes {
     email?: string;
 }
 
+export interface FileTrashItemTypes {
+    id?: number;
+    fileName?: string;
+    fileSize?: string;
+    previewImage?: string;
+}
+
+
 const activityTimeline: ActivityItemTypes[] = [
     {
         id: 1,
@@ -217,16 +225,31 @@ const micuenta: MiCuentaTypes[] = [
 const files: FileItemTypes[] = [
     {
         id: 1,
-        fileName: 'sales-assets.zip',
+        fileName: 'contrato.zip',
         fileSize: '2.3 MB',
         previewImage: project1,
     },
     {
         id: 2,
-        fileName: 'new-contracts.docx',
+        fileName: 'factura_02.pdf',
         fileSize: '1.25 MB',
         previewImage: project2,
     },
 ];
 
-export { activityTimeline, messages, micuenta, files };
+const filetrash: FileTrashItemTypes[] = [
+    {
+        id: 1,
+        fileName: 'contrato.zip',
+        fileSize: '2.3 MB',
+        previewImage: project1,
+    },
+    {
+        id: 2,
+        fileName: 'factura_02.pdf',
+        fileSize: '1.25 MB',
+        previewImage: project2,
+    },
+];
+
+export { activityTimeline, messages, micuenta, files, filetrash };

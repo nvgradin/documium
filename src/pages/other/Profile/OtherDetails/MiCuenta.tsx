@@ -1,6 +1,5 @@
 import React from 'react';
-import { Row, Col, Card, Button, InputGroup, Form } from 'react-bootstrap';
-import classNames from 'classnames';
+import { Card, Button } from 'react-bootstrap';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -8,7 +7,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { MiCuentaTypes } from './data';
 
 // components
-import { FormInput, VerticalForm } from '../../../components';
+import { FormInput, VerticalForm } from '../../../../components';
 
 interface PersonalDetailsProps {
     micuenta: MiCuentaTypes[];
@@ -44,24 +43,24 @@ const MiCuenta = ({ micuenta }: PersonalDetailsProps) => {
 
             <Card>
             <Card.Body>
-                <h4 className="header-title mt-0 mb-1">Basic Form</h4>
-                <p className="sub-header">React validation with react-hook-form library.</p>
+                <h4 className="header-title mt-0 mb-1">Editar Usuario</h4>
+                <p className="sub-header">Edita tus datos</p>
                 <VerticalForm<UserData>
                     onSubmit={() => {}}
                     resolver={schemaResolver}
                     defaultValues={{ username: 'test' }}>
                     <FormInput
-                        label={'Username'}
+                        label={'Nombre de usuario'}
                         type="text"
                         name="username"
-                        placeholder="Enter your name"
+                        placeholder="Introduce tu nombre"
                         containerClass={'mb-3'}
                     />
                     <FormInput
-                        label={'Email address'}
+                        label={'Email'}
                         type="email"
                         name="email"
-                        placeholder="Enter email"
+                        placeholder="Introduce tu email"
                         containerClass={'mb-3'}
                     />
                     <FormInput
@@ -72,20 +71,20 @@ const MiCuenta = ({ micuenta }: PersonalDetailsProps) => {
                         containerClass={'mb-3'}
                     />
                     <FormInput
-                        label={'Confirm Password'}
+                        label={'Confirmar Password'}
                         type="password"
                         name="confirmpassword"
                         placeholder="Password"
                         containerClass={'mb-3'}
                     />
-                    <FormInput label={'Remember me'} type="checkbox" name="checkbox" containerClass={'mb-3'} />
+                    <FormInput label={'Recuerdame'} type="checkbox" name="checkbox" containerClass={'mb-3'} />
 
                     <div className="text-md-end mb-0">
                         <Button variant="primary" className="me-1" type="submit">
-                            Submit
+                            Enviar
                         </Button>
                         <Button variant="secondary" type="reset">
-                            Cancel
+                            Cancelar
                         </Button>
                     </div>
                 </VerticalForm>

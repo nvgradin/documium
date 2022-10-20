@@ -85,7 +85,7 @@ const ProfileMenus = [
     {
         label: 'Mi Cuenta',
         icon: 'user',
-        redirectTo: '/',
+        redirectTo: '/pages/profile',
     },
     {
         label: 'Logout',

@@ -26,10 +26,7 @@ const FileManager = () => {
                     <div className="bg-transparent">
                         {/* right side bar */}
                         <div className="inbox-rightbar h-100 pb-0">
-                            <TopPanel />
-
-                            {/* folder details */}
-                            
+                            <TopPanel />                            
                         </div>
 
                         {/* recent data */}

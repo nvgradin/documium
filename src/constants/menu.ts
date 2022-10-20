@@ -41,9 +41,9 @@ const MENU_ITEMS: MenuItemTypes[] = [
         icon: 'users',
     },
     {
-        key: 'papelera',
+        key: 'apps-trash',
         label: 'Papelera',
-        url: '/apps/file-manager/trash',
+        url: '/apps/trashmanager/trashdetails',
         icon: 'trash',
     },    
     { key: 'apps', label: 'Apps', isTitle: true },

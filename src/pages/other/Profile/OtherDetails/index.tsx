@@ -17,7 +17,7 @@ import { activityTimeline, messages, files } from './data';
 import {  micuenta } from './data';
 
 const OtherDetails = () => {
-    const [activeTab, setactiveTab] = useState<string>('activity');
+    const [activeTab, setactiveTab] = useState<string>('micuenta');
 
     /**
      * handles tab activation
@@ -38,9 +38,6 @@ const OtherDetails = () => {
                     activeKey={activeTab}
                     onSelect={handleSelect}>
                     <Nav.Item as="li">
-                        <Nav.Link eventKey="activity">Actividad</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item as="li">
                         <Nav.Link eventKey="micuenta">Mi cuenta</Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li">
@@ -49,11 +46,8 @@ const OtherDetails = () => {
                 </Nav>
 
                 <Tab.Content>
-                    <Tab.Pane active={activeTab === 'activity'} eventKey="activity">
-                        <Activity activityTimeline={activityTimeline} />
-                    </Tab.Pane>
                     <Tab.Pane active={activeTab === 'micuenta'} eventKey="micuenta">
-                        
+                        <MiCuenta micuenta={micuenta}/>
                     </Tab.Pane>
                     <Tab.Pane active={activeTab === 'files'} eventKey="files">
                         <Files files={files} />
