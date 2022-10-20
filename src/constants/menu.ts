@@ -37,7 +37,7 @@ const MENU_ITEMS: MenuItemTypes[] = [
     {
         key: 'form-contact',
         label: 'Contactos',
-        url: '/forms/contact',
+        url: '/apps/contacts',
         icon: 'users',
     },
     {

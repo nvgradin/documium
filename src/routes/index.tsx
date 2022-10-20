@@ -23,6 +23,8 @@ const EcommerceDashboard = React.lazy(() => import('../pages/dashboard/Ecommerce
 // apps
 const Projects = React.lazy(() => import('../pages/apps/Projects/'));
 const ProjectDetail = React.lazy(() => import('../pages/apps/Projects/Detail/'));
+const Contacts = React.lazy(() => import('../pages/apps/Contacts/'));
+const ContactsDetail = React.lazy(() => import('../pages/apps/Contacts/Detail/'));
 
 // - file
 const FileManager = React.lazy(() => import('../pages/apps/FileManager'));
@@ -144,7 +146,30 @@ const trashAppRoutes: RoutesProps = {
     component: TrashManager,
 };
 
-const appRoutes = [dashboardRoutes, projectAppRoutes, fileAppRoutes, trashAppRoutes];
+const contactsAppRoutes: RoutesProps = {
+    path: '/apps/contacts/details',
+    name: 'Contacts',
+    route: PrivateRoute,
+    roles: ['Admin'],
+    icon: 'uil-briefcase',
+
+    children: [
+        {
+            path: '/apps/contacts',
+            name: 'List',
+            component: Contacts,
+            route: PrivateRoute,
+        },
+        {
+            path: '/apps/contacts/details',
+            name: 'Detail',
+            component: ProjectDetail,
+            route: PrivateRoute,
+        },
+    ],
+};
+
+const appRoutes = [dashboardRoutes, projectAppRoutes, fileAppRoutes, trashAppRoutes, contactsAppRoutes];
 
 // pages
 const extrapagesRoutes: RoutesProps = {

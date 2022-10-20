@@ -27,6 +27,7 @@ const AllRecentFiles = ({ recentFiles }: AllRecentFilesProps) => {
                             <td>{file.name}</td>
                             <td>{file.folderName}</td>
                             <td>{file.lastviewed}</td>
+                            <td>{file.lastviewed}</td>
                             <td>
                                 <Dropdown>
                                     <Dropdown.Toggle
