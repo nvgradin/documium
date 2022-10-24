@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col, Card, Form, FloatingLabel, InputGroup, Button } from 'react-bootstrap';
+import { Dropdown } from 'react-bootstrap';
 import Select from 'react-select';
 
 // components
@@ -39,6 +40,11 @@ const columns = [
         Header: 'Web',
         accessor: 'web',
         sort: false,
+    },
+    {
+        Header: 'Ver más',
+        accessor: 'url',
+        sort: true,
     },
 ];
 

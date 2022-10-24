@@ -3,99 +3,66 @@ import { Link } from 'react-router-dom';
 import { Card, Row, Col } from 'react-bootstrap';
 
 // components
-import TeamMembers from './TeamMembers';
+import CreateUser from './TeamMembers';
 
 // types
-import { ProjectTypes } from '../data';
+import { ContactsTypes } from '../data';
 
-interface AboutProjectProps {
-    project: ProjectTypes;
+interface AboutContactProps {
+    contact: ContactsTypes;
 }
 
-const AboutProject = ({ project }: AboutProjectProps) => {
+const AboutContact = ({ contact }: AboutContactProps) => {
     return (
         <Card>
             <Card.Body>
-                <h6 className="mt-0 header-title">About Project</h6>
+                <h6 className="mt-0 header-title">Detalles de la Empresa</h6>
 
                 <div className="text-muted mt-3">
                     <p>
-                        To an English person, it will seem like simplified English, as a skeptical Cambridge friend of
-                        mine told me what Occidental is. The European languages are members of the same family. Their
-                        separate existence is a myth.
+                    {contact.Notas}
                     </p>
-                    <p>
-                        Everyone realizes why a new common language would be desirable: one could refuse to pay
-                        expensive translators. To achieve this, it would be necessary to have uniform grammar,
-                        pronunciation and more common words. If several languages coalesce, the grammar of the resulting
-                        language is more simple and regular than that of the individual languages.
-                    </p>
-                    <ul className="ps-4 mb-4">
-                        <li>Quis autem vel eum iure</li>
-                        <li>Ut enim ad minima veniam</li>
-                        <li>Et harum quidem rerum</li>
-                        <li>Nam libero cum soluta</li>
-                    </ul>
-
-                    <div className="tags">
-                        <h6 className="fw-bold">Tags</h6>
-                        <div className="text-uppercase">
-                            <Link to="#" className="badge badge-soft-primary me-2">
-                                Html
-                            </Link>
-                            <Link to="#" className="badge badge-soft-primary me-2">
-                                Css
-                            </Link>
-                            <Link to="#" className="badge badge-soft-primary me-2">
-                                Bootstrap
-                            </Link>
-                            <Link to="#" className="badge badge-soft-primary me-2">
-                                JQuery
-                            </Link>
-                        </div>
-                    </div>
-
                     <Row>
                         <Col lg={3} md={6}>
                             <div className="mt-4">
                                 <p className="mb-2 text-uppercase fs-13 fw-bold">
-                                    <i className="uil-calender text-danger"></i> Start Date
+                                    <i className="uil-bag-alt text-danger"></i> CIF
                                 </p>
-                                <h5 className="fs-16">{project.startDate}</h5>
+                                <h5 className="fs-16">{contact.CIF}</h5>
                             </div>
                         </Col>
                         <Col lg={3} md={6}>
                             <div className="mt-4">
                                 <p className="mb-2 text-uppercase fs-13 fw-bold">
-                                    <i className="uil-calendar-slash text-danger"></i> Due Date
+                                    <i className="uil-envelope text-danger"></i> Email
                                 </p>
-                                <h5 className="fs-16">{project.endDate}</h5>
+                                <h5 className="fs-16">{contact.Email}</h5>
                             </div>
                         </Col>
                         <Col lg={3} md={6}>
                             <div className="mt-4">
                                 <p className="mb-2 text-uppercase fs-13 fw-bold">
-                                    <i className="uil-dollar-alt text-danger"></i> Budget
+                                    <i className="uil-phone text-danger"></i> Teléfono
                                 </p>
-                                <h5 className="fs-16">{project.totalBudget}</h5>
+                                <h5 className="fs-16">{contact.Telefono}</h5>
                             </div>
                         </Col>
                         <Col lg={3} md={6}>
                             <div className="mt-4">
                                 <p className="mb-2 text-uppercase fs-13 fw-bold">
-                                    <i className="uil-user text-danger"></i> Owner
+                                    <i className="uil-globe text-danger"></i> Web
                                 </p>
-                                <h5 className="fs-16">{project.owner}</h5>
+                                <h5 className="fs-16">{contact.Web}</h5>
                             </div>
                         </Col>
                     </Row>
 
                     <div className="assign team mt-4">
-                        <TeamMembers teamMembers={project.teamMembers} />
+                        <CreateUser createUser={contact.createUser} />
                     </div>
 
                     <div className="mt-4">
-                        <h6 className="fw-bold">Attached Files</h6>
+                        <h6 className="fw-bold">Archivos</h6>
 
                         <Row>
                             <Col xl={4} md={6}>
@@ -108,7 +75,7 @@ const AboutProject = ({ project }: AboutProjectProps) => {
                                         </div>
                                         <div className="flex-grow-1">
                                             <Link to="#" className="d-inline-block mt-2">
-                                                Landing 1.psd
+                                                Seguro2022.pdf
                                             </Link>
                                         </div>
                                         <div className="float-end mt-1">
@@ -129,7 +96,7 @@ const AboutProject = ({ project }: AboutProjectProps) => {
                                         </div>
                                         <div className="flex-grow-1">
                                             <Link to="#" className="d-inline-block mt-2">
-                                                Landing 2.psd
+                                                Seguro2021.pdf
                                             </Link>
                                         </div>
                                         <div className="float-end mt-1">
@@ -148,4 +115,4 @@ const AboutProject = ({ project }: AboutProjectProps) => {
     );
 };
 
-export default AboutProject;
+export default AboutContact;

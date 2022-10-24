@@ -9,6 +9,7 @@ import user7 from '../../../assets/images/users/avatar-7.jpg';
 import user8 from '../../../assets/images/users/avatar-8.jpg';
 import user9 from '../../../assets/images/users/avatar-9.jpg';
 import user10 from '../../../assets/images/users/avatar-10.jpg';
+import grupogradin from '../../../assets/images/users/grupo-gradin.jpg';
 
 export interface ProjectTypes {
     id: number;
@@ -27,27 +28,6 @@ export interface ProjectTypes {
         variant?: string;
     }[];
     progress?: number;
-    startDate?: string;
-    endDate?: string;
-    totalBudget?: string;
-    owner?: string;
-}
-
-export interface DocumentTypes {
-    id: number;
-    title: string;
-    technology: string;
-    shortDesc?: string;
-    totalTasks?: number;
-    totalTasksCompleted?: number;
-    totalTeamSize?: number;
-    totalHoursSpent?: number;
-    totalComments?: number;
-    createUser: {
-        image?: string;
-        name: string;
-        variant?: string;
-    }[];
     startDate?: string;
     endDate?: string;
     totalBudget?: string;

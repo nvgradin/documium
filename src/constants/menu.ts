@@ -35,10 +35,36 @@ const MENU_ITEMS: MenuItemTypes[] = [
         icon: 'file-plus',
     },
     {
+        key: 'document',
+        label: 'Documentos',
+        url: '/apps/document/details',
+        icon: 'file-text',
+    },
+    {
         key: 'form-contact',
         label: 'Contactos',
         url: '/apps/contacts',
         icon: 'users',
+    },
+    {
+        key: 'apps-contacts',
+        label: 'Contactos',
+        isTitle: false,
+        icon: 'users',
+        children: [
+            {
+                key: 'contacts-details',
+                label: 'List',
+                url: '/apps/contacts/list',
+                parentKey: 'apps-contacts',
+            },
+            {
+                key: 'contacts-details',
+                label: 'Details',
+                url: '/apps/contacts/details',
+                parentKey: 'apps-contacts'
+            },
+        ],
     },
     {
         key: 'trash',
@@ -46,13 +72,19 @@ const MENU_ITEMS: MenuItemTypes[] = [
         url: '/apps/trashmanager',
         icon: 'trash',
     },    
-    { key: 'apps', label: 'Apps', isTitle: true },
+    { key: 'apps', label: 'Apps', isTitle: false },
     {
         key: 'apps-projects',
         label: 'Projects',
         isTitle: false,
         icon: 'briefcase',
         children: [
+            {
+                key: 'project-details',
+                label: 'List',
+                url: '/apps/projects/list',
+                parentKey: 'apps-projects',
+            },
             {
                 key: 'project-details',
                 label: 'Details',

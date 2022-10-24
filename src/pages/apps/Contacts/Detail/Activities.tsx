@@ -15,7 +15,7 @@ const Activities = ({ activity }: ActivitiesProps) => {
     return (
         <Card>
             <Card.Body>
-                <h6 className="mt-0 header-title">Project Activities</h6>
+                <h6 className="mt-0 header-title">Actividades</h6>
                 <ul className="list-unstyled activity-widget">
                     {(activity || []).map((item, index) => {
                         const date = item.date.split(' ')[0];
@@ -53,7 +53,7 @@ const Activities = ({ activity }: ActivitiesProps) => {
 
                 <div className="text-center">
                     <Link to="#" className="btn btn-sm border btn-white">
-                        <FeatherIcons icon="loader" className="icon-dual icon-xs me-2"></FeatherIcons>Load more
+                        <FeatherIcons icon="loader" className="icon-dual icon-xs me-2"></FeatherIcons>Cargar Más
                     </Link>
                 </div>
             </Card.Body>

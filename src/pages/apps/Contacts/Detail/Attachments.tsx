@@ -22,7 +22,7 @@ const Attachments = () => {
                         </div>
                         <div className="flex-grow-1">
                             <Link to="#" className="d-inline-block mt-2">
-                                Landing 1.psd
+                                Seguro2022.pdf
                             </Link>
                         </div>
                         <div className="float-end mt-1">
@@ -41,7 +41,7 @@ const Attachments = () => {
                         </div>
                         <div className="flex-grow-1">
                             <Link to="#" className="d-inline-block mt-2">
-                                Landing 2.psd
+                                Seguro2021.pdf
                             </Link>
                         </div>
                         <div className="float-end mt-1">

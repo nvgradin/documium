@@ -24,10 +24,13 @@ const EcommerceDashboard = React.lazy(() => import('../pages/dashboard/Ecommerce
 const Projects = React.lazy(() => import('../pages/apps/Projects/'));
 const ProjectDetail = React.lazy(() => import('../pages/apps/Projects/Detail/'));
 const Contacts = React.lazy(() => import('../pages/apps/Contacts/'));
-const ContactsDetail = React.lazy(() => import('../pages/apps/Contacts/Detail/'));
+const ContactDetail = React.lazy(() => import('../pages/apps/Contacts/Detail/'));
 
 // - file
 const FileManager = React.lazy(() => import('../pages/apps/FileManager'));
+
+// - document
+const Document = React.lazy(() => import('../pages/apps/Document/Detail/'));
 
 // - filetrash
 const TrashManager = React.lazy(() => import('../pages/apps/TrashManager'));
@@ -105,7 +108,7 @@ const dashboardRoutes: RoutesProps = {
 };
 
 const projectAppRoutes: RoutesProps = {
-    path: '/apps/projects',
+    path: '/apps',
     name: 'Projects',
     route: PrivateRoute,
     roles: ['Admin'],
@@ -137,6 +140,15 @@ const fileAppRoutes: RoutesProps = {
     component: FileManager,
 };
 
+const documentAppRoutes: RoutesProps = {
+    path: '/apps/document/details',
+    name: 'Document',
+    route: PrivateRoute,
+    roles: ['Admin'],
+    icon: 'file-text',
+    component: Document,
+};
+
 const trashAppRoutes: RoutesProps = {
     path: '/apps/trashmanager',
     name: 'Trash Manager',
@@ -147,15 +159,15 @@ const trashAppRoutes: RoutesProps = {
 };
 
 const contactsAppRoutes: RoutesProps = {
-    path: '/apps/contacts/details',
+    path: '/apps',
     name: 'Contacts',
-    route: PrivateRoute,
     roles: ['Admin'],
     icon: 'uil-briefcase',
+    header: 'Contacts',
 
     children: [
         {
-            path: '/apps/contacts',
+            path: '/apps/contacts/list',
             name: 'List',
             component: Contacts,
             route: PrivateRoute,
@@ -163,13 +175,13 @@ const contactsAppRoutes: RoutesProps = {
         {
             path: '/apps/contacts/details',
             name: 'Detail',
-            component: ProjectDetail,
+            component: ContactDetail,
             route: PrivateRoute,
         },
     ],
 };
 
-const appRoutes = [dashboardRoutes, projectAppRoutes, fileAppRoutes, trashAppRoutes, contactsAppRoutes];
+const appRoutes = [dashboardRoutes, projectAppRoutes, fileAppRoutes, documentAppRoutes,trashAppRoutes, contactsAppRoutes];
 
 // pages
 const extrapagesRoutes: RoutesProps = {

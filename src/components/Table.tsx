@@ -9,6 +9,7 @@ import {
     useExpanded,
 } from 'react-table';
 import classNames from 'classnames';
+import { Button, NavLink } from 'react-bootstrap';
 
 // components
 import Pagination from './Pagination';
@@ -19,6 +20,7 @@ interface GlobalFilterProps {
     setGlobalFilter: any;
     searchBoxClass: any;
 }
+
 
 // Define a default UI for filtering
 const GlobalFilter = ({ preGlobalFilteredRows, globalFilter, setGlobalFilter, searchBoxClass }: GlobalFilterProps) => {
