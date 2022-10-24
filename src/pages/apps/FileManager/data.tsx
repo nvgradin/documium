@@ -1,5 +1,6 @@
 import project1 from '../../../assets/images/projects/project-1.jpg';
 import project2 from '../../../assets/images/projects/project-2.jpg';
+import grupogradin from '../../../assets/images/users/grupo-gradin.jpg';
 
 
 export interface folderDetailTypes {
@@ -9,9 +10,24 @@ export interface folderDetailTypes {
 }
 
 export interface RecentFileTypes {
-    name: string;
-    folderName: string;
-    lastviewed: string;
+    id: number;
+    name:string;
+    origen: string;
+    empresainterna: string;
+    contacto: string;
+    area: string;
+    tipodocument: string;
+    permisos: string;
+    tag: string;
+    notas:string;
+    createUser: {
+      image?: string;
+      name: string;
+      variant?: string;
+    }[];
+    url:string;
+    documentDate: string;
+    createDate: string;
 }
 
 export interface FileItemTypes {
@@ -20,6 +36,220 @@ export interface FileItemTypes {
     fileSize?: string;
     previewImage?: string;
 }
+
+export interface DocumentsTypes {
+    id: number;
+    name:string;
+    origen: string;
+    empresainterna: string;
+    contacto: string;
+    area: string;
+    tipodocument: string;
+    permisos: string;
+    tag: string;
+    notas:string;
+    createUser: {
+      image?: string;
+      name: string;
+      variant?: string;
+    }[];
+    url:string;
+    documentDate: string;
+    createDate: string;
+}
+
+const documents:DocumentsTypes[] = [
+    {
+    id: 17,
+    name:"Seguro2022",
+    origen:"Entrada",
+    empresainterna:"JJ Gradín",
+    contacto: "AXA SEGUROS GENERALES SA",
+    area:"Seguros",
+    permisos:"todos",
+    tipodocument:"Contrato",
+    tag:"",
+    notas: "Aseguradora AXA, Seguro 2022",
+    createUser: [
+      {
+        image: grupogradin,
+        name: "Grupo Gradín",
+      },
+    ], 
+    url: "Document/Details",
+    documentDate: '15 de Octubre',
+    createDate: '15 de Octubre',
+    },
+    {
+    id: 1,
+    name:"Licencia",
+    origen:"Entrada",
+    empresainterna:"SIAL",
+    contacto: "Xunta de Galicia",
+    area:"Jurídico",
+    permisos:"todos",
+    tipodocument:"Escrituras",
+    tag:"",
+    notas: "Licencia",
+    createUser: [
+      {
+        image: grupogradin,
+        name: "Grupo Gradín",
+      },
+    ], 
+    url: "",
+    documentDate: '15 de Octubre',
+    createDate: '15 de Octubre',
+    },
+    {
+    id: 2,
+    name:"Factura1E",
+    origen:"Entrada",
+    empresainterna:"Horposa",
+    contacto: "Nombre",
+    area:"Contable",
+    permisos:"todos",
+    tipodocument:"Factura",
+    tag:"",
+    notas: "Factura",
+    createUser: [
+      {
+        image: grupogradin,
+        name: "Grupo Gradín",
+      },
+    ], 
+    url: "",
+    documentDate: '20 de Octubre',
+    createDate: '20 de Octubre',
+    },
+    {
+    id: 3,
+    name:"Contrato",
+    origen:"Interno",
+    empresainterna:"Horposa",
+    contacto: "Nombre",
+    area:"Laboral",
+    permisos:"todos",
+    tipodocument:"Contrato",
+    tag:"",
+    notas: "Contrato",
+    createUser: [
+      {
+        image: grupogradin,
+        name: "Grupo Gradín",
+      },
+    ], 
+    url: "",
+    documentDate: '20 de Abril',
+    createDate: '20 de Abril',
+    },
+    {
+    id: 4,
+    name:"Mantenimiento",
+    origen:"Interno",
+    empresainterna:"JJ Gradín",
+    contacto: "Lear",
+    area:"Obras",
+    permisos:"todos",
+    tipodocument:"Obra",
+    tag:"",
+    notas: "Obra de mantenimiento",
+    createUser: [
+      {
+        image: grupogradin,
+        name: "Grupo Gradín",
+      },
+    ], 
+    url: "",
+    documentDate: '20 de Septiembre',
+    createDate: '20 de Septiembre',
+    },
+    {
+    id: 5,
+    name:"PLano 1",
+    origen:"Interno",
+    empresainterna:"Parque Empresarial do Fulao",
+    contacto: "Kaleido",
+    area:"Arrendamiento",
+    permisos:"todos",
+    tipodocument:"Plano",
+    tag:"",
+    notas: "Plano nave",
+    createUser: [
+      {
+        image: grupogradin,
+        name: "Grupo Gradín",
+      },
+    ], 
+    url: "",
+    documentDate: '20 de Septiembre',
+    createDate: '20 de Septiembre',
+    },
+    {
+    id: 6,
+    name:"PLano 2",
+    origen:"Interno",
+    empresainterna:"Parque Empresarial do Fulao",
+    contacto: "Sea",
+    area:"Arrendamiento",
+    permisos:"todos",
+    tipodocument:"Plano",
+    tag:"",
+    notas: "Plano nave",
+    createUser: [
+      {
+        image: grupogradin,
+        name: "Grupo Gradín",
+      },
+    ], 
+    url: "",
+    documentDate: '27 de Septiembre',
+    createDate: '27 de Septiembre',
+    },
+    {
+    id: 7,
+    name:"Contrato",
+    origen:"Interno",
+    empresainterna:"A Granxa",
+    contacto: "Nombre",
+    area:"Laboral",
+    permisos:"todos",
+    tipodocument:"Contrato",
+    tag:"",
+    notas: "Contrato obras de mantenimiento",
+    createUser: [
+      {
+        image: grupogradin,
+        name: "Grupo Gradín",
+      },
+    ], 
+    url: "",
+    documentDate: '2 de Octubre',
+    createDate: '2 de Octubre',
+    },
+    {
+    id: 8,
+    name:"Ingreso Alquiler comprobante",
+    origen:"Externo",
+    empresainterna:"A Granxa",
+    contacto: "Nombre",
+    area:"Contable",
+    permisos:"todos",
+    tipodocument:"Contrato",
+    tag:"",
+    notas: "Alquiler obras de mantenimiento",
+    createUser: [
+      {
+        image: grupogradin,
+        name: "Grupo Gradín",
+      },
+    ], 
+    url: "",
+    documentDate: '2 de Octubre',
+    createDate: '2 de Octubre',
+    },
+];
+
 
 const folderDetails: folderDetailTypes[] = [
     {
@@ -54,46 +284,195 @@ const folderDetails: folderDetailTypes[] = [
     },
 ];
 
-const recentFiles: RecentFileTypes[] = [
+const recentFiles:RecentFileTypes[] = [
     {
-        name: 'Licencia',
-        folderName: 'SIAL',
-        lastviewed: '03 Dec',
+    id: 17,
+    name:"Seguro2022",
+    origen:"Entrada",
+    empresainterna:"JJ Gradín",
+    contacto: "AXA SEGUROS GENERALES SA",
+    area:"Seguros",
+    permisos:"todos",
+    tipodocument:"Contrato",
+    tag:"",
+    notas: "Aseguradora AXA, Seguro 2022",
+    createUser: [
+      {
+        image: grupogradin,
+        name: "Grupo Gradín",
+      },
+    ], 
+    url: "Document/Details",
+    documentDate: '15 de Octubre',
+    createDate: '15 de Octubre',
     },
     {
-        name: 'Horposa',
-        folderName: 'Factura1',
-        lastviewed: '05 Oct',
+    id: 1,
+    name:"Licencia",
+    origen:"Entrada",
+    empresainterna:"SIAL",
+    contacto: "Xunta de Galicia",
+    area:"Jurídico",
+    permisos:"todos",
+    tipodocument:"Escrituras",
+    tag:"",
+    notas: "Licencia",
+    createUser: [
+      {
+        image: grupogradin,
+        name: "Grupo Gradín",
+      },
+    ], 
+    url: "",
+    documentDate: '15 de Octubre',
+    createDate: '15 de Octubre',
     },
     {
-        name: 'Contrato',
-        folderName: 'Recursos Humanos',
-        lastviewed: '11 Nov',
+    id: 2,
+    name:"Factura1E",
+    origen:"Entrada",
+    empresainterna:"Horposa",
+    contacto: "Nombre",
+    area:"Contable",
+    permisos:"todos",
+    tipodocument:"Factura",
+    tag:"",
+    notas: "Factura",
+    createUser: [
+      {
+        image: grupogradin,
+        name: "Grupo Gradín",
+      },
+    ], 
+    url: "",
+    documentDate: '20 de Octubre',
+    createDate: '20 de Octubre',
     },
     {
-        name: 'Mantenimiento',
-        folderName: 'Obras',
-        lastviewed: '11 Nov',
+    id: 3,
+    name:"Contrato",
+    origen:"Interno",
+    empresainterna:"Horposa",
+    contacto: "Nombre",
+    area:"Laboral",
+    permisos:"todos",
+    tipodocument:"Contrato",
+    tag:"",
+    notas: "Contrato",
+    createUser: [
+      {
+        image: grupogradin,
+        name: "Grupo Gradín",
+      },
+    ], 
+    url: "",
+    documentDate: '20 de Abril',
+    createDate: '20 de Abril',
     },
     {
-        name: 'Plano F0',
-        folderName: 'Parque Empresarial do Fulao',
-        lastviewed: '15 Mar',
+    id: 4,
+    name:"Mantenimiento",
+    origen:"Interno",
+    empresainterna:"JJ Gradín",
+    contacto: "Lear",
+    area:"Obras",
+    permisos:"todos",
+    tipodocument:"Obra",
+    tag:"",
+    notas: "Obra de mantenimiento",
+    createUser: [
+      {
+        image: grupogradin,
+        name: "Grupo Gradín",
+      },
+    ], 
+    url: "",
+    documentDate: '20 de Septiembre',
+    createDate: '20 de Septiembre',
     },
     {
-        name: 'Plano F0',
-        folderName: 'Parque Empresarial do Fulao',
-        lastviewed: '15 Mar',
+    id: 5,
+    name:"PLano 1",
+    origen:"Interno",
+    empresainterna:"Parque Empresarial do Fulao",
+    contacto: "Kaleido",
+    area:"Arrendamiento",
+    permisos:"todos",
+    tipodocument:"Plano",
+    tag:"",
+    notas: "Plano nave",
+    createUser: [
+      {
+        image: grupogradin,
+        name: "Grupo Gradín",
+      },
+    ], 
+    url: "",
+    documentDate: '20 de Septiembre',
+    createDate: '20 de Septiembre',
     },
     {
-        name: 'Contrato',
-        folderName: 'Obras y Mantenimiento',
-        lastviewed: '14 Mar',
+    id: 6,
+    name:"PLano 2",
+    origen:"Interno",
+    empresainterna:"Parque Empresarial do Fulao",
+    contacto: "Sea",
+    area:"Arrendamiento",
+    permisos:"todos",
+    tipodocument:"Plano",
+    tag:"",
+    notas: "Plano nave",
+    createUser: [
+      {
+        image: grupogradin,
+        name: "Grupo Gradín",
+      },
+    ], 
+    url: "",
+    documentDate: '27 de Septiembre',
+    createDate: '27 de Septiembre',
     },
     {
-        name: 'Alquiler Factura',
-        folderName: 'Inmuebles',
-        lastviewed: '13 Mar',
+    id: 7,
+    name:"Contrato",
+    origen:"Interno",
+    empresainterna:"A Granxa",
+    contacto: "Nombre",
+    area:"Laboral",
+    permisos:"todos",
+    tipodocument:"Contrato",
+    tag:"",
+    notas: "Contrato obras de mantenimiento",
+    createUser: [
+      {
+        image: grupogradin,
+        name: "Grupo Gradín",
+      },
+    ], 
+    url: "",
+    documentDate: '2 de Octubre',
+    createDate: '2 de Octubre',
+    },
+    {
+    id: 8,
+    name:"Ingreso Alquiler comprobante",
+    origen:"Externo",
+    empresainterna:"A Granxa",
+    contacto: "Nombre",
+    area:"Contable",
+    permisos:"todos",
+    tipodocument:"Contrato",
+    tag:"",
+    notas: "Alquiler obras de mantenimiento",
+    createUser: [
+      {
+        image: grupogradin,
+        name: "Grupo Gradín",
+      },
+    ], 
+    url: "",
+    documentDate: '2 de Octubre',
+    createDate: '2 de Octubre',
     },
 ];
 
@@ -112,4 +491,4 @@ const files: FileItemTypes[] = [
     },
 ];
 
-export { folderDetails, recentFiles, files };
+export { folderDetails, recentFiles, files, documents };

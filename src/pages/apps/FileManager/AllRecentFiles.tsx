@@ -1,33 +1,38 @@
 import React from 'react';
 import { Dropdown, Table } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 // dummy data
-import { RecentFileTypes } from './data';
+import { RecentFileTypes, DocumentsTypes } from './data';
 
 interface AllRecentFilesProps {
     recentFiles: RecentFileTypes[];
 }
 
-const AllRecentFiles = ({ recentFiles }: AllRecentFilesProps) => {
+interface AllDocumentsProps {
+    documents: DocumentsTypes[];
+}
+
+const AllRecentFiles = ({ documents }: AllDocumentsProps) => {
     return (
-        <Table responsive className="table-nowrap table-centered mb-0">
+        <Table responsive className="table-nowrap table-centered mb-0" >
             <thead>
                 <tr>
                     <th className="border-0">Documento</th>
-                    <th className="border-0">Empresa</th>
-                    <th className="border-0">Fechas</th>
                     <th className="border-0">Contacto</th>
+                    <th className="border-0">Fechas</th>
+                    <th className="border-0">Área</th>
                     <th className="border-0">Edicción</th>
                 </tr>
             </thead>
             <tbody>
-                {(recentFiles || []).map((file, index) => {
+                {(documents || []).map((document, index) => {
                     return (
                         <tr key={index}>
-                            <td>{file.name}</td>
-                            <td>{file.folderName}</td>
-                            <td>{file.lastviewed}</td>
-                            <td>{file.lastviewed}</td>
+                            <td>{document.name}</td>
+                            <td>{document.contacto}</td>
+                            <td>{document.createDate}</td>
+                            <td>{document.area}</td>
                             <td>
                                 <Dropdown>
                                     <Dropdown.Toggle
@@ -42,7 +47,8 @@ const AllRecentFiles = ({ recentFiles }: AllRecentFilesProps) => {
                                         </Dropdown.Item>
                                         <Dropdown.Item>
                                             <i className="uil uil-link-h me-2 text-muted vertical-middle"></i>
-                                            Obtener Link para compartir
+                                            <Link to="{document.url}" className="text-dark">
+                                            Ver más</Link>
                                         </Dropdown.Item>
                                         <Dropdown.Item>
                                             <i className="uil uil-pen me-2 text-muted vertical-middle"></i>

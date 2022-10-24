@@ -39,8 +39,8 @@ const DocumentDetail = () => {
               },
             ], 
             url: "",
-            documentDate: '15 de Octubre',
-            createDate: '15 de Octubre',
+            documentDate: '15-10-22',
+            createDate: '15-10-22',
         };
     const [activeTab, setactiveTab] = useState<string>('comments');
 

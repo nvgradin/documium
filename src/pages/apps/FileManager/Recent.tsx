@@ -15,49 +15,14 @@ const Recent = ({ recentFiles }: RecentProps) => {
     return (
         <Row>
             <Col xs={18}>
-                <h6 className="fs-18">Recientes</h6>
+                <h6 className="fs-18"></h6>
 
                 <Card className="border-0">
                     <Card.Body>
                         <Tab.Container id="left-tabs-example" defaultActiveKey="all">
-                            <Nav as="ul" variant="tabs">
-                                <Nav.Item as="li">
-                                    <Nav.Link eventKey="all">
-                                        <span className="d-block d-sm-none">
-                                            <i className="uil-home-alt"></i>
-                                        </span>
-                                        <span className="d-none d-sm-block">Todas</span>
-                                    </Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item as="li">
-                                    <Nav.Link>
-                                        <span className="d-block d-sm-none">
-                                            <i className="bi bi-file-earmark"></i>
-                                        </span>
-                                        <span className="d-none d-sm-block">Grupo Gradín</span>
-                                    </Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item as="li">
-                                    <Nav.Link>
-                                        <span className="d-block d-sm-none">
-                                            <i className="bi bi-card-image"></i>
-                                        </span>
-                                        <span className="d-none d-sm-block">JJ Gradín</span>
-                                    </Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item as="li">
-                                    <Nav.Link>
-                                        <span className="d-block d-sm-none">
-                                            <i className="bi bi-card-list"></i>
-                                        </span>
-                                        <span className="d-none d-sm-block">SIAL</span>
-                                    </Nav.Link>
-                                </Nav.Item>
-                            </Nav>
-
                             <Tab.Content className="text-muted pt-2">
                                 <Tab.Pane eventKey="all">
-                                    <AllRecentFiles recentFiles={recentFiles} />
+                                    <AllRecentFiles documents={recentFiles} />
                                 </Tab.Pane>
                             </Tab.Content>
                         </Tab.Container>

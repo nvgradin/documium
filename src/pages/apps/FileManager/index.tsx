@@ -5,11 +5,11 @@ import { Row, Col } from 'react-bootstrap';
 import PageTitle from '../../../components/PageTitle';
 
 import TopPanel from './TopPanel';
-import Folders from './Folders';
 import Recent from './Recent';
+import SearchDocuments from './SearchDocuments';
 
 // dummy data
-import { folderDetails, recentFiles } from './data';
+import { recentFiles } from './data';
 
 // FileManager
 const FileManager = () => {
@@ -26,7 +26,7 @@ const FileManager = () => {
                     <div className="bg-transparent">
                         {/* right side bar */}
                         <div className="inbox-rightbar h-100 pb-0">
-                            <TopPanel />                            
+                            <SearchDocuments />                           
                         </div>
 
                         {/* recent data */}
